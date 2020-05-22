@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="right"
+    tools:openDrawer="start">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/toolbar5">
+
+
+        <RelativeLayout
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_alignParentTop="true"
+            android:background="@color/toolbar5"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:id="@+id/toolbar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:gravity="right"
+                android:paddingTop="8dp"
+                android:paddingRight="10dp"
+                android:textColor="@android:color/white"
+                android:textSize="20dp"
+                android:fontFamily="@font/fontfamily"/>
+
+
+            <ImageButton
+                android:id="@+id/back"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="@null"
+                android:src="@drawable/ic_back_svg" />
+
+
+        </RelativeLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp">
+            <LinearLayout
+                android:id="@+id/det_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/toolbar"
+                android:baselineAligned="false"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp">
+
+                        <TextView
+                            android:id="@+id/factoryname_"
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginTop="5dp"
+                            android:gravity="right"
+                            android:maxLines="1"
+                            android:text="@string/factoryname_"
+                            android:textColor="@color/background"
+                            android:textSize="14sp"
+                            android:fontFamily="@font/fontfamily"/>
+
+                        <EditText
+                            android:id="@+id/factoryname"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_toLeftOf="@+id/factoryname_"
+                            android:background="@drawable/custom_view_tv"
+                            android:cursorVisible="true"
+                            android:gravity="right"
+                            android:hint="@string/factoryname"
+                            android:minLines="1"
+                            android:textColor="@color/text"
+                            android:textSize="16sp"
+                            android:fontFamily="@font/fontfamily"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp">
+
+                        <TextView
+                            android:id="@+id/Distributor_"
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginTop="5dp"
+                            android:gravity="right"
+                            android:maxLines="1"
+                            android:text="@string/Distributor_"
+                            android:textColor="@color/background"
+                            android:textSize="14sp"
+                            android:fontFamily="@font/fontfamily"/>
+
+                        <EditText
+                            android:id="@+id/Distributor"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_toLeftOf="@+id/Distributor_"
+                            android:background="@drawable/custom_view_tv"
+                            android:cursorVisible="true"
+                            android:gravity="right"
+                            android:hint="@string/Distributor"
+                            android:lines="1"
+                            android:fontFamily="@font/fontfamily"
+                            android:textColor="@color/text"
+                            android:textSize="16sp"
+                            android:inputType="text"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp">
+
+                        <TextView
+                            android:id="@+id/mobile_"
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginTop="5dp"
+                            android:gravity="right"
+                            android:maxLines="1"
+                            android:text="@string/mobile_"
+                            android:textColor="@color/background"
+                            android:fontFamily="@font/fontfamily"
+                            android:textSize="14sp" />
+
+                        <EditText
+                            android:id="@+id/mobile"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_toLeftOf="@+id/mobile_"
+                            android:background="@drawable/custom_view_tv"
+                            android:cursorVisible="true"
+                            android:gravity="right"
+                            android:hint="@string/mobile"
+                            android:lines="1"
+                            android:textColor="@color/text"
+                            android:inputType="number"
+                            android:fontFamily="@font/fontfamily"
+                            android:textSize="16sp" />
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp">
+
+                        <TextView
+                            android:id="@+id/brand_"
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginTop="5dp"
+                            android:gravity="right"
+                            android:lines="1"
+                            android:text="@string/brand_"
+                            android:textColor="@color/background"
+                            android:fontFamily="@font/fontfamily"
+                            android:textSize="14sp" />
+
+                        <EditText
+                            android:id="@+id/brand"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_toLeftOf="@+id/brand_"
+                            android:background="@drawable/custom_view_tv"
+                            android:cursorVisible="true"
+                            android:gravity="right"
+                            android:hint="@string/brand"
+                            android:minLines="1"
+                            android:fontFamily="@font/fontfamily"
+                            android:textColor="@color/text"
+                            android:textSize="16sp" />
+
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lvbtn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/lvregionspinner"
+                        android:layout_marginTop="20dp"
+                        android:baselineAligned="false"
+                        android:orientation="horizontal">
+
+
+                        <Button
+                            android:id="@+id/btnsubmit"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginLeft="70dp"
+                            android:layout_marginRight="70dp"
+                            android:layout_marginBottom="15dp"
+                            android:layout_gravity="left"
+                            android:text="@string/submitfactory"
+                            android:background="@drawable/custom_button_green_"
+                            android:spinnerMode="dropdown"
+                            android:fontFamily="@font/fontfamily"/>
+
+                    </LinearLayout>
+
+                    <ScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:id="@+id/lvlist"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/lvregionspinner"
+                            android:layout_marginTop="15dp"
+                            android:baselineAligned="false"
+                            android:orientation="horizontal">
+
+
+                            <TextView
+                                android:id="@+id/brandlist"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginRight="20dp"
+                                android:layout_marginBottom="10dp"
+                                android:textSize="16sp"
+                                android:textStyle="bold"
+                                android:textColor="@color/background"
+                                android:fontFamily="@font/fontfamily" />
+
+                        </LinearLayout>
+
+                    </ScrollView>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+    </RelativeLayout>
+</LinearLayout>

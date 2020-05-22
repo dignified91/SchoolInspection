@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:openDrawer="start">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="#075983"
+        android:contentInsetEnd="0dp"
+        android:contentInsetRight="0dp"
+        app:contentInsetEnd="0dp"
+        app:contentInsetLeft="0dp"
+        app:contentInsetRight="0dp"
+        app:contentInsetStart="0dp"
+        app:popupTheme="@style/AppTheme.PopupOverlay">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <TextView
+                android:id="@+id/toolbar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="right"
+                android:paddingTop="8dp"
+                android:paddingRight="10dp"
+                android:textColor="@android:color/white"
+                android:textSize="20dp"
+                android:fontFamily="@font/fontfamily"/>
+
+
+            <ImageButton
+                android:id="@+id/back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="5dp"
+                android:background="@null"
+                android:paddingTop="8dp"
+                app:srcCompat="@drawable/ic_back_svg"
+                tools:ignore="VectorDrawableCompat" />
+
+        </RelativeLayout>
+
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/toolbar"
+        android:orientation="vertical"
+        android:padding="0dp">
+
+<!--        <LinearLayout-->
+<!--            android:id="@+id/llt"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="10dp"-->
+<!--            android:gravity="center"-->
+<!--            android:orientation="vertical"-->
+<!--            android:padding="10dp">-->
+
+
+<!--            <EditText-->
+<!--                android:id="@+id/txtname_or_subcode"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginLeft="7dp"-->
+<!--                android:layout_marginTop="15dp"-->
+<!--                android:layout_marginRight="7dp"-->
+<!--                android:layout_weight="1"-->
+<!--                android:background="@drawable/customspinnerview"-->
+<!--                android:gravity="center"-->
+<!--                android:hint="@string/gcode_ofcode_schcode"-->
+<!--                android:padding="10dp"-->
+<!--                android:spinnerMode="dropdown"-->
+<!--                android:textSize="18sp" />-->
+
+
+<!--        </LinearLayout>-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/llt"
+            android:layout_marginTop="25dp"
+            android:baselineAligned="false"
+            android:orientation="horizontal"
+            android:weightSum="1.0">
+
+            <Button
+                android:id="@+id/seterror"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/custom_button"
+                android:text="@string/submiterror"
+                android:textColor="@color/toolbar"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+
+<!--            <Button-->
+<!--                android:id="@+id/checktrue"-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_weight="0.5"-->
+<!--                android:layout_marginLeft="10dp"-->
+<!--                android:layout_marginRight="10dp"-->
+<!--                android:layout_marginBottom="10dp"-->
+<!--                android:layout_marginTop="10dp"-->
+<!--                android:background="@drawable/custom_button"-->
+<!--                android:text="@string/checkcontract"-->
+<!--                android:textColor="@color/toolbar"-->
+<!--                android:textSize="16dp"-->
+<!--                android:textStyle="bold" />-->
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llchoff"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/llt"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:baselineAligned="false"
+            android:orientation="horizontal">
+
+            <ListView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/listview"></ListView>
+            <include layout="@layout/recycler_main">
+
+            </include>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/toolbar4"
+        android:contentInsetEnd="0dp"
+        android:contentInsetRight="0dp"
+        app:contentInsetEnd="0dp"
+        app:contentInsetLeft="0dp"
+        app:contentInsetRight="0dp"
+        app:contentInsetStart="0dp"
+        app:popupTheme="@style/AppTheme.PopupOverlay">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <TextView
+                android:id="@+id/toolbar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:gravity="right"
+                android:paddingRight="10dp"
+                android:paddingTop="8dp"
+                android:textColor="@android:color/white"
+                android:textSize="20dp"
+                android:fontFamily="@font/fontfamily"/>
+
+            <ImageButton
+                android:id="@+id/back"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="@null"
+                android:src="@drawable/ic_back_svg" />
+
+        </RelativeLayout>
+
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <WebView
+        android:id="@+id/webview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

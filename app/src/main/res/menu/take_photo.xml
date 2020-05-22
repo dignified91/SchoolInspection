@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/menu_take_photo_camera"
+        android:title="از دوربین"
+        android:icon="@drawable/ic_camera_black"/>
+
+    <item android:id="@+id/menu_take_photo_gallery"
+        android:title="از گالری عکس ها"
+        android:icon="@drawable/ic_gallery_black"/>
+</menu>

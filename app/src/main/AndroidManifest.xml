@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="iso.my.com.inspectionstudentorganization">
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera2"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        tools:node="replace" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+
+    <application
+        android:name=".GeneralClass.App"
+        android:allowBackup="true"
+        android:icon="@drawable/sazman"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/sazman"
+        android:supportsRtl="false"
+        android:theme="@style/Theme.Design.Light.NoActionBar"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".SubmitBill"></activity>
+        <activity android:name=".ValuationForm_School" />
+        <activity android:name=".ValuationForm_Master2" />
+        <activity android:name=".ValuationForm_Master1" />
+        <activity android:name=".SendFormNew" />
+        <activity
+            android:name=".Contract"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SubmitBuffetData"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SubmitManufacturer"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SendFormValuation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SendErrorBuffet"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".BuffetDetail"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SupportBuffetActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".CompleteinspectionBuffet"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".IdentifyBuffetCard"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MainMenuBuffet"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".CompleteinspectionProduct"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SendParentForm"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SendErrorUniForm"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SendErrorProUniForm"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SendProForm"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SendSchoolForm"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SchoolUniFormDetail"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SupportUniFormActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SupportProUniFormActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".IdentifyUniFormCard"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".IdentifyProUniFormCard"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MainMenuUniForm"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MainMenuProductUniForm"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ProductUniFormDetail"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".CheckCompany"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".NonRegSchool"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".CheckPrice"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SendError"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SendForm"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Completeinspection"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ShowLocation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".OfficeDetail"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MainMenuOffice"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ChooseApk"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SplashScreen"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".LoginUser"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MainMenu"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SchoolDetail"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".IdentifyCard"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SupportActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".IdentifyOfficeCard"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SupportOfficeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SchoolLocation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".CompleteInspectionUniForm"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".FingerPaint"
+            android:screenOrientation="portrait" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyDoDY6J1BaARQOw6134fxjt9ND3sQpdlWA" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+    </application>
+
+</manifest>

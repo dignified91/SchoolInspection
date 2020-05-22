@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="8dp"
+    android:clickable="true"
+    android:focusable="true"
+    card_view:cardCornerRadius="10dp"
+    card_view:cardElevation="10dp"
+    card_view:contentPadding="5dp"
+    tools:ignore="MissingPrefix"
+    card_view:cardBackgroundColor="@color/backcardview2"
+    android:id="@+id/cardview">
+
+    <LinearLayout
+        android:id="@+id/det_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+                <TextView
+                    android:id="@+id/manager_"
+                    android:layout_width="85dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="right"
+                    android:maxLines="1"
+                    android:text="@string/manager_"
+                    android:textColor="@color/text2"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/fontfamily"/>
+
+                <TextView
+                    android:id="@+id/manager"
+                    android:layout_width="260dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_toLeftOf="@+id/manager_"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="right"
+                    android:maxLines="1"
+                    android:text="@string/manager"
+                    android:textColor="@color/text2"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/fontfamily"/>
+
+
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+                <TextView
+                    android:id="@+id/subno_"
+                    android:layout_width="85dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="right"
+                    android:maxLines="1"
+                    android:text="@string/subno_"
+                    android:textColor="@color/text2"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/fontfamily"/>
+
+                <TextView
+                    android:id="@+id/subno"
+                    android:layout_width="260dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_toLeftOf="@+id/subno_"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="right"
+                    android:maxLines="1"
+                    android:text="@string/subno"
+                    android:textColor="@color/text2"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/fontfamily"/>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+                <TextView
+                    android:id="@+id/insurance_"
+                    android:layout_width="85dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="right"
+                    android:maxLines="1"
+                    android:text="@string/insurance_"
+                    android:textColor="@color/text2"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/fontfamily"/>
+
+                <TextView
+                    android:id="@+id/insurance"
+                    android:layout_width="260dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_toLeftOf="@+id/insurance_"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="right"
+                    android:maxLines="1"
+                    android:text="@string/insurance"
+                    android:textColor="@color/text2"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/fontfamily"/>
+
+                <CheckBox
+                    android:id="@+id/checkins"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+ />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+                <TextView
+                    android:id="@+id/economic_"
+                    android:layout_width="88dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="right"
+                    android:maxLines="1"
+                    android:text="@string/economic_"
+                    android:textColor="@color/text2"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/fontfamily"/>
+
+                <TextView
+                    android:id="@+id/economic"
+                    android:layout_width="260dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_toLeftOf="@+id/economic_"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="right"
+                    android:maxLines="1"
+                    android:text="@string/economic"
+                    android:textColor="@color/text2"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/fontfamily"/>
+
+                <CheckBox
+                    android:id="@+id/checkeco"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+/>
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+                <TextView
+                    android:id="@+id/phone_"
+                    android:layout_width="88dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="right"
+                    android:maxLines="1"
+                    android:text="@string/phone_"
+                    android:textColor="@color/text2"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/fontfamily"/>
+
+                <TextView
+                    android:id="@+id/phone"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_toLeftOf="@+id/phone_"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="right"
+                    android:maxLines="1"
+                    android:text="@string/phone"
+                    android:textColor="@color/text2"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/fontfamily"/>
+
+                <CheckBox
+                    android:id="@+id/checkphone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+                <TextView
+                    android:id="@+id/officetype_"
+                    android:layout_width="88dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="right"
+                    android:maxLines="1"
+                    android:text="@string/officetype_"
+                    android:textColor="@color/text2"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/fontfamily"/>
+
+                <TextView
+                    android:id="@+id/officetype"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_toLeftOf="@+id/officetype_"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="right"
+                    android:maxLines="1"
+                    android:text="@string/officetype"
+                    android:textColor="@color/text2"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/fontfamily"/>
+
+                <CheckBox
+                    android:id="@+id/checktype"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+                <TextView
+                    android:id="@+id/address_"
+                    android:layout_width="88dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="right"
+                    android:maxLines="1"
+                    android:text="@string/address_"
+                    android:textColor="@color/text2"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/fontfamily"/>
+
+                <TextView
+                    android:id="@+id/address"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_toLeftOf="@+id/address_"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="right"
+                    android:maxLines="4"
+                    android:text="@string/address"
+                    android:textColor="@color/text2"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/fontfamily"/>
+
+                <CheckBox
+                    android:id="@+id/checkaddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+ />
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

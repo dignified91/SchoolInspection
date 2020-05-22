@@ -1,0 +1,2 @@
+include ':app', ':dlibrary'
+rootProject.name='Inspection Student Organization'

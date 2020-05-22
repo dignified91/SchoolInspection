@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="right"
+    tools:openDrawer="start">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/toolbar">
+
+
+        <RelativeLayout
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_alignParentTop="true"
+            android:background="@color/toolbar"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:id="@+id/toolbar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:gravity="right"
+                android:paddingTop="8dp"
+                android:paddingRight="10dp"
+                android:textColor="@android:color/white"
+                android:textSize="20dp"
+                android:fontFamily="@font/fontfamily"/>
+
+
+            <ImageButton
+                android:id="@+id/btnback"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="@null"
+                android:src="@drawable/ic_back_svg" />
+
+
+        </RelativeLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp">
+
+            <LinearLayout
+                android:id="@+id/det_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/toolbar"
+                android:baselineAligned="false"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_margin="10dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:text="@string/priceexp"
+                        android:padding="15dp"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:lineSpacingExtra="10dp"
+                        android:fontFamily="@font/fontfamily"/>
+
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:weightSum="1.0">
+
+
+                    <TextView
+                        android:id="@+id/toman"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.25"
+                        android:fontFamily="@font/yekan"
+                        android:gravity="center"
+                        android:text="@string/toman"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/price"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.45"
+                        android:fontFamily="@font/yekan"
+                        android:gravity="center"
+                        android:text="@string/price"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/price_"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.27"
+                        android:fontFamily="@font/yekan"
+                        android:gravity="right"
+                        android:text="@string/price_"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="10dp">
+
+                        <TextView
+                            android:id="@+id/numberbill_"
+                            android:layout_width="95dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginTop="5dp"
+                            android:gravity="right"
+                            android:maxLines="1"
+                            android:text="@string/numberbill_"
+                            android:textColor="@color/background"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:fontFamily="@font/fontfamily"/>
+
+                        <EditText
+                            android:id="@+id/numberbill"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_toLeftOf="@+id/numberbill_"
+                            android:background="@drawable/custom_view_tv"
+                            android:cursorVisible="true"
+                            android:gravity="right"
+                            android:hint="@string/numberbill"
+                            android:maxLines="1"
+                            android:paddingRight="10dp"
+                            android:textColor="@color/text"
+                            android:textSize="16sp"
+                            android:fontFamily="@font/fontfamily"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="10dp">
+
+                        <TextView
+                            android:id="@+id/payment_"
+                            android:layout_width="95dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginTop="5dp"
+                            android:gravity="right"
+                            android:maxLines="1"
+                            android:text="@string/payment_"
+                            android:textColor="@color/background"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:fontFamily="@font/fontfamily"/>
+
+                        <EditText
+                            android:id="@+id/payment"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_toLeftOf="@+id/payment_"
+                            android:background="@drawable/custom_view_tv"
+                            android:cursorVisible="true"
+                            android:gravity="right"
+                            android:hint="@string/payment"
+                            android:maxLines="1"
+                            android:textColor="@color/text"
+                            android:textSize="16sp"
+                            android:fontFamily="@font/fontfamily"/>
+
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:id="@+id/rldate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="10dp">
+
+                        <TextView
+                            android:id="@+id/date_"
+                            android:layout_width="95dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginTop="5dp"
+                            android:gravity="right"
+                            android:maxLines="1"
+                            android:text="@string/date_"
+                            android:textColor="@color/background"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:fontFamily="@font/fontfamily"/>
+
+                        <EditText
+                            android:id="@+id/date"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_toLeftOf="@+id/date_"
+                            android:background="@drawable/custom_view_tv"
+                            android:gravity="center"
+                            android:maxLines="1"
+                            android:hint="@string/date"
+                            android:textColor="@color/text"
+                            android:textSize="18sp"
+                            android:fontFamily="@font/fontfamily"/>
+
+
+                    </RelativeLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/lvbtn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/lvregionspinner"
+                        android:layout_marginTop="15dp"
+                        android:baselineAligned="false"
+                        android:orientation="horizontal">
+
+
+                        <Button
+                            android:id="@+id/btnsubmit"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginLeft="35dp"
+                            android:layout_marginRight="35dp"
+                            android:layout_marginBottom="15dp"
+                            android:background="@drawable/custom_button_green_"
+                            android:spinnerMode="dropdown"
+                            android:text="@string/submitfish"
+                            android:textStyle="bold"
+                            android:textSize="14sp"
+                            android:textColor="@color/toolbar"
+                            android:fontFamily="@font/fontfamily"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+    </RelativeLayout>
+</LinearLayout>

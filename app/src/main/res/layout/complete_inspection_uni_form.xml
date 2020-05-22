@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:openDrawer="start">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/toolbar3"
+        android:contentInsetEnd="0dp"
+        android:contentInsetRight="0dp"
+        app:contentInsetEnd="0dp"
+        app:contentInsetLeft="0dp"
+        app:contentInsetRight="0dp"
+        app:contentInsetStart="0dp"
+        app:popupTheme="@style/AppTheme.PopupOverlay">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <TextView
+                android:id="@+id/toolbar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="right"
+                android:paddingTop="8dp"
+                android:paddingRight="10dp"
+                android:textColor="@android:color/white"
+                android:textSize="20dp"
+                android:fontFamily="@font/fontfamily"/>
+
+
+            <ImageButton
+                android:id="@+id/back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="5dp"
+                android:background="@null"
+                android:paddingTop="8dp"
+                app:srcCompat="@drawable/ic_back_svg"
+                tools:ignore="VectorDrawableCompat" />
+
+        </RelativeLayout>
+
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/background" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/toolbar"
+        android:orientation="vertical"
+        android:padding="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/lyschform"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="#018679"
+                android:gravity="center"
+
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/btnsendschform"
+                    android:layout_width="34dp"
+                    android:layout_height="34dp"
+                    android:background="@drawable/ic_school_svg" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center"
+                    android:text="@string/sendschform"
+                    android:textColor="@color/background"
+                    android:textSize="16dp"
+                    android:fontFamily="@font/fontfamily"/>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/background" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/lyparentform"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="#018B7E"
+                android:gravity="center"
+                android:orientation="vertical">
+
+
+                <ImageButton
+                    android:id="@+id/btnsendparentform"
+                    android:layout_width="34dp"
+                    android:layout_height="34dp"
+                    android:background="@drawable/ic_family" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center"
+                    android:text="@string/sendparentform"
+                    android:textColor="@color/background"
+                    android:textSize="16dp"
+                    android:fontFamily="@font/fontfamily"/>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/background" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+
+            <LinearLayout
+                android:id="@+id/lyerror"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="#029687"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/btnerror"
+                    android:layout_width="34dp"
+                    android:layout_height="34dp"
+                    android:background="@drawable/ic_error_svg" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center"
+                    android:text="@string/senderror"
+                    android:textColor="@color/background"
+                    android:textSize="16dp"
+                    android:fontFamily="@font/fontfamily"/>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/background" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/lyend"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="#02A291"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/btnend"
+                    android:layout_width="34dp"
+                    android:layout_height="34dp"
+                    android:background="@drawable/ic_end_svg" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center"
+                    android:text="@string/endins"
+                    android:textColor="@color/background"
+                    android:textSize="16dp"
+                    android:fontFamily="@font/fontfamily"/>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

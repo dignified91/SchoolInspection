@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="8dp"
+    android:clickable="true"
+    android:focusable="true"
+    card_view:cardCornerRadius="10dp"
+    card_view:cardElevation="10dp"
+    card_view:contentPadding="5dp"
+    tools:ignore="MissingPrefix"
+    card_view:cardBackgroundColor="@color/background"
+    android:id="@+id/cardview">
+
+    <LinearLayout
+        android:id="@+id/det_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+                <TextView
+                    android:id="@+id/officename_"
+                    android:layout_width="90dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="right"
+                    android:maxLines="1"
+                    android:text="@string/officename_"
+                    android:textColor="@color/text"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/fontfamily"/>
+
+                <TextView
+                    android:id="@+id/officename"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_toLeftOf="@+id/officename_"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="right"
+                    android:maxLines="1"
+                    android:text="@string/officename"
+                    android:textColor="@color/text"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/fontfamily"
+                    />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+                <TextView
+                    android:id="@+id/schname_"
+                    android:layout_width="90dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="right"
+                    android:maxLines="1"
+                    android:text="@string/schname_"
+                    android:textColor="@color/text"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/fontfamily"/>
+
+                <TextView
+                    android:id="@+id/schname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_toLeftOf="@+id/schname_"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="right"
+                    android:maxLines="1"
+                    android:text="@string/schname"
+                    android:textColor="@color/text"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/fontfamily"/>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+                <TextView
+                    android:id="@+id/number_"
+                    android:layout_width="90dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="right"
+                    android:maxLines="1"
+                    android:text="@string/number_"
+                    android:textColor="@color/text"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/fontfamily"/>
+
+                <TextView
+                    android:id="@+id/number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_toLeftOf="@+id/number_"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="right"
+                    android:maxLines="1"
+                    android:text="@string/number"
+                    android:textColor="@color/text"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/fontfamily"/>
+
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+                <TextView
+                    android:id="@+id/schcode_"
+                    android:layout_width="90dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="right"
+                    android:maxLines="1"
+                    android:text="@string/schcode_"
+                    android:textColor="@color/text"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/fontfamily"/>
+
+                <TextView
+                    android:id="@+id/schcode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_toLeftOf="@+id/schcode_"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="right"
+                    android:maxLines="1"
+                    android:text="@string/schcode"
+                    android:textColor="@color/text"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/fontfamily"/>
+
+
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+                <TextView
+                    android:id="@+id/gcode_"
+                    android:layout_width="90dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="right"
+                    android:maxLines="1"
+                    android:text="@string/gcode_"
+                    android:textColor="@color/text"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/fontfamily"/>
+
+                <TextView
+                    android:id="@+id/gcode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_toLeftOf="@+id/gcode_"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="right"
+                    android:maxLines="1"
+                    android:text="@string/gcode"
+                    android:textColor="@color/text"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/fontfamily"/>
+
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+                <TextView
+                    android:id="@+id/pay_"
+                    android:layout_width="90dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="right"
+                    android:maxLines="1"
+                    android:text="@string/pay_"
+                    android:textColor="@color/text"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/fontfamily"/>
+
+                <TextView
+                    android:id="@+id/pay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_toLeftOf="@+id/pay_"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="right"
+                    android:maxLines="1"
+                    android:text="@string/pay"
+                    android:textColor="@color/text"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/fontfamily"/>
+
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+                <TextView
+                    android:id="@+id/date_"
+                    android:layout_width="90dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="right"
+                    android:maxLines="1"
+                    android:text="@string/date_"
+                    android:textColor="@color/text"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/fontfamily"/>
+
+                <TextView
+                    android:id="@+id/date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_toLeftOf="@+id/date_"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="right"
+                    android:maxLines="1"
+                    android:lineSpacingExtra="10dp"
+                    android:text="@string/ddd"
+                    android:textColor="@color/text"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/fontfamily"/>
+
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,481 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/toolbar4"
+        android:contentInsetEnd="0dp"
+        android:contentInsetRight="0dp"
+        app:contentInsetEnd="0dp"
+        app:contentInsetLeft="0dp"
+        app:contentInsetRight="0dp"
+        app:contentInsetStart="0dp"
+        app:popupTheme="@style/AppTheme.PopupOverlay">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <TextView
+                android:id="@+id/toolbar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:gravity="right"
+                android:paddingRight="10dp"
+                android:paddingTop="8dp"
+                android:textColor="@android:color/white"
+                android:textSize="20dp"
+                android:fontFamily="@font/fontfamily"/>
+
+            <ImageButton
+                android:id="@+id/back"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="@null"
+                android:src="@drawable/ic_back_svg" />
+
+        </RelativeLayout>
+
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="5dp"
+        >
+        <LinearLayout
+            android:id="@+id/request_layout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+            android:orientation="horizontal"
+            android:layout_marginBottom="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_margin="5dp">
+
+
+                <RadioGroup
+                    android:id="@+id/radio_group1"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginRight="10dp"
+                    >
+
+                    <RadioButton
+                        android:id="@+id/no1"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:text="خیر"
+                        android:fontFamily="@font/fontfamily" />
+
+                    <RadioButton
+                        android:id="@+id/yes1"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:checked="false"
+                        android:text="بلی"
+                        android:fontFamily="@font/fontfamily"/>
+
+
+                </RadioGroup>
+
+                <TextView
+                    android:id="@+id/formname1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginRight="5dp"
+                    android:gravity="right"
+                    android:layout_gravity="center"
+                    android:maxLines="1"
+                    android:text="@string/formname1"
+                    android:lineSpacingExtra="10dp"
+                    android:lines="2"
+                    android:textColor="@color/text4"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/fontfamily"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/request_layout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+            android:orientation="horizontal"
+            android:layout_marginBottom="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_margin="5dp">
+
+
+                <RadioGroup
+                    android:id="@+id/radio_group2"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginRight="10dp" >
+
+                    <RadioButton
+                        android:id="@+id/no2"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:text="خیر"
+                        android:fontFamily="@font/fontfamily"/>
+
+                    <RadioButton
+                        android:id="@+id/yes2"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:text="بلی"
+                        android:fontFamily="@font/fontfamily"/>
+
+
+                </RadioGroup>
+
+                <TextView
+                    android:id="@+id/formname2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginRight="5dp"
+                    android:gravity="right"
+                    android:layout_gravity="center"
+                    android:maxLines="1"
+                    android:text="@string/formname2"
+                    android:textColor="@color/text4"
+                    android:lines="2"
+                    android:lineSpacingExtra="10dp"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/fontfamily"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/request_layout3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+            android:orientation="horizontal"
+            android:layout_marginBottom="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_margin="5dp">
+
+
+                <RadioGroup
+                    android:id="@+id/radio_group3"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginRight="10dp" >
+
+                    <RadioButton
+                        android:id="@+id/no3"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:text="خیر"
+                        android:fontFamily="@font/fontfamily"/>
+
+                    <RadioButton
+                        android:id="@+id/yes3"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:text="بلی"
+                        android:fontFamily="@font/fontfamily"/>
+
+
+                </RadioGroup>
+
+                <TextView
+                    android:id="@+id/formname3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginRight="5dp"
+                    android:gravity="right"
+                    android:layout_gravity="center"
+                    android:maxLines="1"
+                    android:text="@string/formname3"
+                    android:textColor="@color/text4"
+                    android:lines="2"
+                    android:lineSpacingExtra="10dp"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/fontfamily"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/request_layout4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+            android:orientation="horizontal"
+            android:layout_marginBottom="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_margin="5dp">
+
+
+                <RadioGroup
+                    android:id="@+id/radio_group4"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginRight="10dp" >
+
+                    <RadioButton
+                        android:id="@+id/no4"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:text="خیر"
+                        android:fontFamily="@font/fontfamily"/>
+
+                    <RadioButton
+                        android:id="@+id/yes4"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:text="بلی"
+                        android:fontFamily="@font/fontfamily"/>
+
+
+                </RadioGroup>
+
+                <TextView
+                    android:id="@+id/formname4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginRight="5dp"
+                    android:gravity="right"
+                    android:layout_gravity="center"
+                    android:maxLines="1"
+                    android:text="@string/formname4"
+                    android:textColor="@color/text4"
+                    android:lines="2"
+                    android:lineSpacingExtra="10dp"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/fontfamily"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/request_layout5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+            android:orientation="horizontal"
+            android:layout_marginBottom="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_margin="5dp">
+
+
+                <RadioGroup
+                    android:id="@+id/radio_group5"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginRight="10dp" >
+
+                    <RadioButton
+                        android:id="@+id/no5"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:text="خیر"
+                        android:fontFamily="@font/fontfamily"/>
+
+                    <RadioButton
+                        android:id="@+id/yes5"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:text="بلی"
+                        android:fontFamily="@font/fontfamily"/>
+
+
+                </RadioGroup>
+
+                <TextView
+                    android:id="@+id/formname5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginRight="5dp"
+                    android:gravity="right"
+                    android:layout_gravity="center"
+                    android:maxLines="1"
+                    android:text="@string/formname5"
+                    android:textColor="@color/text4"
+                    android:lines="2"
+                    android:lineSpacingExtra="10dp"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/fontfamily"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/request_layout6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+            android:orientation="horizontal"
+            android:layout_marginBottom="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_margin="5dp"
+                >
+
+
+                <RadioGroup
+                    android:id="@+id/radio_group6"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginRight="10dp" >
+
+                    <RadioButton
+                        android:id="@+id/no6"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:text="خیر"
+                        android:fontFamily="@font/fontfamily"/>
+
+                    <RadioButton
+                        android:id="@+id/yes6"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:text="بلی"
+                        android:fontFamily="@font/fontfamily"/>
+
+
+                </RadioGroup>
+
+                <TextView
+                    android:id="@+id/formname6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginRight="5dp"
+                    android:gravity="right"
+                    android:layout_gravity="center"
+                    android:maxLines="1"
+                    android:text="@string/formname6"
+                    android:textColor="@color/text4"
+                    android:lines="2"
+                    android:lineSpacingExtra="10dp"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/fontfamily"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/request_layout7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_margin="5dp">
+
+
+                <RadioGroup
+                    android:id="@+id/radio_group7"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginRight="10dp" >
+
+                    <RadioButton
+                        android:id="@+id/no7"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:text="خیر"
+                        android:fontFamily="@font/fontfamily"/>
+
+                    <RadioButton
+                        android:id="@+id/yes7"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:text="بلی"
+                        android:fontFamily="@font/fontfamily" />
+
+
+                </RadioGroup>
+
+                <TextView
+                    android:id="@+id/formname7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginRight="5dp"
+                    android:gravity="right"
+                    android:layout_gravity="center"
+                    android:maxLines="1"
+                    android:text="@string/formname7"
+                    android:textColor="@color/text4"
+                    android:lines="2"
+                    android:lineSpacingExtra="10dp"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/fontfamily"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnsub"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:textSize="16sp"
+            android:textColor="@color/text4"
+            android:text="ثبت فرم"
+            android:background="@drawable/custom_button_purple"
+            android:fontFamily="@font/fontfamily"/>
+    </LinearLayout>
+</LinearLayout>

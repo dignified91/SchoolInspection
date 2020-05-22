@@ -1,0 +1,86 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/popup_1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/llt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+
+        <Spinner
+            android:id="@+id/typeerSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_marginTop="20dp"
+            android:layout_weight="1"
+            android:spinnerMode="dropdown"
+            android:fontFamily="@font/fontfamily"/>
+
+        <Spinner
+            android:id="@+id/typeerrorSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_marginTop="20dp"
+            android:layout_weight="1"
+            android:spinnerMode="dropdown"
+            android:fontFamily="@font/fontfamily"/>
+
+
+        <EditText
+            android:id="@+id/txterexplain"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_marginTop="25dp"
+            android:layout_weight="1"
+            android:background="@drawable/customspinnerview"
+            android:hint="@string/explain"
+            android:minLines="4"
+            android:paddingRight="5dp"
+            android:spinnerMode="dropdown"
+            android:fontFamily="@font/fontfamily"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:baselineAligned="false"
+        android:orientation="horizontal"
+        android:weightSum="1.0">
+
+        <Button
+            android:id="@+id/senderror"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_weight="1.0"
+            android:background="@drawable/custom_button"
+            android:text="@string/send"
+            android:textColor="@color/background"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:fontFamily="@font/fontfamily"/>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

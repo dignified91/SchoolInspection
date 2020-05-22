@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:clickable="true"
+    android:focusable="true"
+    card_view:cardCornerRadius="10dp"
+    card_view:cardElevation="10dp"
+    card_view:contentPadding="5dp"
+    tools:ignore="MissingPrefix"
+    card_view:cardBackgroundColor="@color/background">
+
+    <LinearLayout
+        android:id="@+id/det_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp">
+
+                <TextView
+                    android:id="@+id/schoolname_"
+                    android:layout_width="95dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:gravity="right"
+                    android:maxLines="1"
+                    android:text="@string/schoolname_"
+                    android:textColor="@color/text"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/fontfamily"/>
+
+                <TextView
+                    android:id="@+id/schoolname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@+id/schoolname_"
+                    android:gravity="right"
+                    android:maxLines="1"
+                    android:text="@string/schoolname"
+                    android:textColor="@color/text"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/fontfamily"/>
+
+
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp" >
+
+                <TextView
+                    android:id="@+id/region_"
+                    android:layout_width="95dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:gravity="right"
+                    android:maxLines="1"
+                    android:text="@string/region_"
+                    android:textColor="@color/text"
+                    android:textSize="16sp"
+                    android:layout_alignParentRight="true"
+                    android:fontFamily="@font/fontfamily"/>
+
+                <TextView
+                    android:id="@+id/region"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@+id/region_"
+                    android:gravity="right"
+                    android:maxLines="1"
+                    android:text="@string/region"
+                    android:textColor="@color/text"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/fontfamily"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp" >
+
+                <TextView
+                    android:id="@+id/gender_"
+                    android:layout_width="95dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:gravity="right"
+                    android:maxLines="1"
+                    android:text="@string/gender_"
+                    android:textColor="@color/text"
+                    android:textSize="16sp"
+                    android:layout_alignParentRight="true"
+                    android:fontFamily="@font/fontfamily"/>
+
+                <TextView
+                    android:id="@+id/gender"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@+id/gender_"
+                    android:gravity="right"
+                    android:maxLines="1"
+                    android:text="@string/gender"
+                    android:textColor="@color/text"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/fontfamily"/>
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp" >
+
+                <TextView
+                    android:id="@+id/type_"
+                    android:layout_width="95dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:gravity="right"
+                    android:maxLines="1"
+                    android:text="@string/type_"
+                    android:textColor="@color/text"
+                    android:textSize="16sp"
+                    android:layout_alignParentRight="true"
+                    android:fontFamily="@font/fontfamily"/>
+
+                <TextView
+                    android:id="@+id/type"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@+id/type_"
+                    android:gravity="right"
+                    android:maxLines="1"
+                    android:text="@string/type"
+                    android:textColor="@color/text"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/fontfamily"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp" >
+
+                <TextView
+                    android:id="@+id/schaddress_"
+                    android:layout_width="95dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:gravity="right"
+                    android:maxLines="1"
+                    android:text="@string/schaddress_"
+                    android:textColor="@color/text"
+                    android:textSize="16sp"
+                    android:layout_alignParentRight="true"
+                    android:fontFamily="@font/fontfamily"/>
+
+                <TextView
+                    android:id="@+id/schaddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@+id/schaddress_"
+                    android:gravity="right"
+                    android:minLines="2"
+                    android:lineSpacingExtra="5dp"
+                    android:text="@string/schaddress"
+                    android:textColor="@color/text"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/fontfamily"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp" >
+
+                <TextView
+                    android:id="@+id/schexp_"
+                    android:layout_width="95dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:gravity="right"
+                    android:maxLines="1"
+                    android:text="@string/schexp_"
+                    android:textColor="@color/text"
+                    android:textSize="16sp"
+                    android:layout_alignParentRight="true"
+                    android:fontFamily="@font/fontfamily"/>
+
+                <TextView
+                    android:id="@+id/schexp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@+id/schexp_"
+                    android:gravity="right"
+                    android:minLines="4"
+                    android:lineSpacingExtra="5dp"
+                    android:text="@string/schexp"
+                    android:textColor="@color/text"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/fontfamily"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

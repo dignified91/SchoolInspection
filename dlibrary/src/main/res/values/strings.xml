@@ -1,0 +1,7 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">SunDatePicker</string>
+    <string name="ok_btn">تائید</string>
+    <string name="cancel_btn" tools:ignore="ExtraTranslation">انصراف</string>
+    <string name="today">امروز</string>
+    <string name="date_placeholder">"%s، %d %s"</string>
+</resources>

@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:clickable="true"
+    android:focusable="true"
+    card_view:cardCornerRadius="10dp"
+    card_view:cardElevation="10dp"
+    card_view:contentPadding="5dp"
+    tools:ignore="MissingPrefix"
+    card_view:cardBackgroundColor="@color/background">
+
+    <LinearLayout
+        android:id="@+id/det_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp">
+
+                <TextView
+                    android:id="@+id/proname_"
+                    android:layout_width="95dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:gravity="right"
+                    android:maxLines="1"
+                    android:text="@string/proname_"
+                    android:textColor="@color/text"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/fontfamily"/>
+
+                <TextView
+                    android:id="@+id/proname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@+id/proname_"
+                    android:gravity="right"
+                    android:maxLines="1"
+                    android:text="@string/proname"
+                    android:textColor="@color/text"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/fontfamily"/>
+
+
+
+            </RelativeLayout>
+
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp" >
+
+                <TextView
+                    android:id="@+id/promanager_"
+                    android:layout_width="95dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:gravity="right"
+                    android:maxLines="1"
+                    android:text="@string/promanager_"
+                    android:textColor="@color/text"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/fontfamily"/>
+
+                <TextView
+                    android:id="@+id/promanager"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@+id/promanager_"
+                    android:gravity="right"
+                    android:maxLines="1"
+                    android:text="@string/promanager"
+                    android:textColor="@color/text"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/fontfamily"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp" >
+
+                <TextView
+                    android:id="@+id/prophone_"
+                    android:layout_width="95dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:gravity="right"
+                    android:maxLines="1"
+                    android:text="@string/prophone_"
+                    android:textColor="@color/text"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/fontfamily"/>
+
+                <TextView
+                    android:id="@+id/prophone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@+id/prophone_"
+                    android:gravity="right"
+                    android:maxLines="1"
+                    android:text="@string/prophone"
+                    android:textColor="@color/text"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/fontfamily"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp" >
+
+                <TextView
+                    android:id="@+id/proaddress_"
+                    android:layout_width="95dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:gravity="right"
+                    android:maxLines="1"
+                    android:text="@string/proaddress_"
+                    android:textColor="@color/text"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/fontfamily"/>
+
+                <TextView
+                    android:id="@+id/proaddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@+id/proaddress_"
+                    android:gravity="right"
+                    android:minLines="2"
+                    android:lineSpacingExtra="5dp"
+                    android:text="@string/proaddress"
+                    android:textColor="@color/text"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/fontfamily"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp" >
+
+                <TextView
+                    android:id="@+id/proexp_"
+                    android:layout_width="95dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:gravity="right"
+                    android:maxLines="1"
+                    android:text="@string/schexp_"
+                    android:textColor="@color/text"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/fontfamily"/>
+
+                <TextView
+                    android:id="@+id/proexp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@+id/proexp_"
+                    android:gravity="right"
+                    android:minLines="4"
+                    android:lineSpacingExtra="5dp"
+                    android:text="@string/schexp"
+                    android:textColor="@color/text"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/fontfamily"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

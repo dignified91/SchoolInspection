@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SchoolDetail">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_alignParentTop="true"
+            android:background="@color/toolbar2"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:id="@+id/toolbar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:gravity="right"
+                android:paddingRight="10dp"
+                android:paddingTop="8dp"
+                android:textColor="@android:color/white"
+                android:textSize="20dp"
+                android:fontFamily="@font/fontfamily"/>
+
+
+            <ImageButton
+                android:id="@+id/btnback"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginBottom="12dp"
+                android:layout_marginStart="12dp"
+                android:background="@null"
+                android:paddingTop="13dp"
+                app:srcCompat="@drawable/ic_back_svg"
+                tools:ignore="VectorDrawableCompat" />
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/lvcard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="55dp"
+            android:layout_marginBottom="5dp"
+            android:orientation="horizontal">
+
+            <ListView
+                android:id="@+id/lvdetofflist"
+                android:layout_width="match_parent"
+                android:layout_height="300dp">
+
+            </ListView>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lvexp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+            android:orientation="horizontal"
+            android:weightSum="1.0"
+            android:layout_below="@id/lvcard">
+
+            <EditText
+                android:id="@+id/exp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minLines="4"
+                android:hint="توضیحات"
+                android:padding="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/customspinnerview"
+                android:textSize="14dp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/lvbtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:baselineAligned="false"
+            android:orientation="horizontal"
+            android:weightSum="1.0"
+            android:layout_below="@id/lvexp">
+
+            <Button
+                android:id="@+id/map"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:text="مشاهده روی نقشه"
+                android:textColor="@color/background"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/custom_button_blue"
+                android:fontFamily="@font/fontfamily"/>
+
+            <Button
+            android:id="@+id/start"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:text="@string/startins"
+            android:textColor="@color/background"
+            android:textSize="16dp"
+            android:textStyle="bold"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+            android:background="@drawable/custom_button_blue"
+                android:fontFamily="@font/fontfamily"/>
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:baselineAligned="false"
+            android:orientation="horizontal"
+            android:weightSum="1.0"
+            android:layout_below="@id/lvbtn">
+
+            <Button
+            android:id="@+id/btnsub"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:text="@string/submitoffice"
+            android:textColor="@color/background"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/custom_button_error"
+                android:fontFamily="@font/fontfamily"/>
+
+            <Button
+            android:id="@+id/btnsendform"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:text="@string/sendform"
+            android:textColor="@color/background"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/custom_button_form"
+                android:fontFamily="@font/fontfamily"/>
+
+            <!--<Button-->
+            <!--android:id="@+id/map"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="1.0"-->
+            <!--android:text="مشاهده روی نقشه"-->
+            <!--android:textColor="@color/background"-->
+            <!--android:textSize="16dp"-->
+            <!--android:textStyle="bold"-->
+            <!--android:layout_marginLeft="90dp"-->
+            <!--android:layout_marginTop="10dp"-->
+            <!--android:layout_marginRight="90dp"-->
+            <!--android:layout_marginBottom="5dp"-->
+            <!--android:background="@drawable/custom_button"/>-->
+
+        </LinearLayout>
+
+        <!--<LinearLayout-->
+            <!--android:id="@+id/lvmap"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="100dp"-->
+            <!--android:baselineAligned="false"-->
+            <!--android:orientation="horizontal"-->
+            <!--android:layout_below="@id/lvcard">-->
+
+
+            <!--<Button-->
+                <!--android:id="@+id/start"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_weight="1.0"-->
+                <!--android:text="@string/startins"-->
+                <!--android:textColor="@color/background"-->
+                <!--android:textSize="16dp"-->
+                <!--android:textStyle="bold"-->
+                <!--android:layout_marginLeft="90dp"-->
+                <!--android:layout_marginTop="30dp"-->
+                <!--android:layout_marginRight="90dp"-->
+                <!--android:background="@drawable/custom_button"/>-->
+
+
+        <!--</LinearLayout>-->
+
+        <!--<LinearLayout-->
+            <!--android:id="@+id/lvstart"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="70dp"-->
+            <!--android:baselineAligned="false"-->
+            <!--android:orientation="horizontal"-->
+            <!--android:layout_below="@id/lvsendform">-->
+
+
+            <!--<Button-->
+                <!--android:id="@+id/map"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_weight="1.0"-->
+                <!--android:text="مشاهده روی نقشه"-->
+                <!--android:textColor="@color/background"-->
+                <!--android:textSize="16dp"-->
+                <!--android:textStyle="bold"-->
+                <!--android:layout_marginLeft="90dp"-->
+                <!--android:layout_marginTop="10dp"-->
+                <!--android:layout_marginRight="90dp"-->
+                <!--android:layout_marginBottom="5dp"-->
+                <!--android:background="@drawable/custom_button"/>-->
+
+
+        <!--</LinearLayout>-->
+        <!--<LinearLayout-->
+            <!--android:id="@+id/lvsendform"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:baselineAligned="false"-->
+            <!--android:orientation="horizontal"-->
+            <!--android:layout_below="@id/lvmap">-->
+
+
+
+
+
+        <!--</LinearLayout>-->
+        <!--<LinearLayout-->
+            <!--android:id="@+id/lvsubform"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginTop="10dp"-->
+            <!--android:baselineAligned="false"-->
+            <!--android:orientation="horizontal"-->
+            <!--android:layout_below="@id/lvstart">-->
+
+
+            <!--<Button-->
+                <!--android:id="@+id/btnsendform"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_weight="1.0"-->
+                <!--android:text="@string/sendform"-->
+                <!--android:textColor="@color/background"-->
+                <!--android:textSize="16dp"-->
+                <!--android:textStyle="bold"-->
+                <!--android:layout_marginLeft="90dp"-->
+                <!--android:layout_marginTop="5dp"-->
+                <!--android:layout_marginRight="90dp"-->
+                <!--android:layout_marginBottom="5dp"-->
+                <!--android:background="@drawable/custom_button_form"/>-->
+
+
+        <!--</LinearLayout>-->
+
+
+
+    </RelativeLayout>
+
+</LinearLayout>

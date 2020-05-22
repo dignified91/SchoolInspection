@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background"
+
+    tools:openDrawer="start">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/background"
+        android:contentInsetEnd="0dp"
+        android:contentInsetRight="0dp"
+        app:contentInsetEnd="0dp"
+        app:contentInsetLeft="0dp"
+        app:contentInsetRight="0dp"
+        app:contentInsetStart="0dp"
+        android:layout_margin="5dp"
+        app:popupTheme="@style/AppTheme.PopupOverlay">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <!--            <TextView-->
+            <!--                android:id="@+id/toolbar_title"-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="match_parent"-->
+            <!--                android:layout_centerInParent="true"-->
+            <!--                android:layout_gravity="center"-->
+
+            <!--                android:textColor="@android:color/black"-->
+            <!--                android:textSize="20dp" />-->
+
+
+            <ImageButton
+                android:id="@+id/btnexit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="5dp"
+                android:background="@null"
+                android:paddingTop="8dp"
+                app:srcCompat="@drawable/ic_logout_svg"
+                tools:ignore="VectorDrawableCompat" />
+
+        </RelativeLayout>
+
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/background"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.8"
+                    android:layout_marginBottom="15dp"
+                    android:background="@color/background"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+
+                        android:background="@drawable/sazman" />
+
+                    <!--            <TextView-->
+                    <!--                android:layout_width="match_parent"-->
+                    <!--                android:layout_height="wrap_content"-->
+                    <!--                android:gravity="center"-->
+                    <!--                android:text="@string/sazman"-->
+                    <!--                android:textColor="@color/toolbar"-->
+                    <!--                android:textSize="16sp" />-->
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/background"
+                    android:layout_marginLeft="35dp"
+                    android:layout_marginRight="35dp"
+                    android:layout_marginBottom="15dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">>
+
+
+
+
+                    <LinearLayout
+                        android:id="@+id/lyoffice"
+                        android:layout_width="110dp"
+                        android:layout_height="110dp"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="40dp"
+
+                        android:background="@drawable/custom_button"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageButton
+                            android:id="@+id/btnoffice"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:background="@drawable/ic_office_svg" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="8dp"
+                            android:gravity="center"
+                            android:text="@string/office"
+                            android:textColor="@color/text"
+                            android:textSize="14dp"
+                            android:fontFamily="@font/fontfamily"/>
+
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/lyservice"
+                        android:layout_width="110dp"
+                        android:layout_height="110dp"
+                        android:layout_gravity="center"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/custom_button"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+
+                        <ImageButton
+                            android:id="@+id/btnservice"
+                            style="bold"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:background="@drawable/ic_car_svg" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="8dp"
+                            android:gravity="center"
+                            android:text="@string/service"
+                            android:textColor="@color/text"
+                            android:textSize="14dp"
+                            android:fontFamily="@font/fontfamily"/>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/background"
+                    android:layout_marginLeft="35dp"
+                    android:layout_marginRight="35dp"
+                    android:layout_marginBottom="15dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/lyproduct"
+                        android:layout_width="110dp"
+                        android:layout_height="110dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/custom_button"
+                        android:gravity="center"
+                        android:layout_marginRight="40dp"
+                        android:orientation="vertical">
+
+
+                        <ImageButton
+                            android:id="@+id/btnproduct"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:background="@drawable/ic_sewing_svg" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="8dp"
+                            android:gravity="center"
+                            android:text="@string/sweing"
+                            android:textColor="@color/text"
+                            android:textSize="14dp"
+                            android:fontFamily="@font/fontfamily"/>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/lyuniform"
+                        android:layout_width="110dp"
+                        android:layout_height="110dp"
+                        android:layout_gravity="center"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/custom_button"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageButton
+                            android:id="@+id/btnuniform"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:background="@drawable/ic_cloth_svg" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="8dp"
+                            android:gravity="center"
+                            android:text="@string/cloth"
+                            android:textColor="@color/text"
+                            android:textSize="14dp"
+                            android:fontFamily="@font/fontfamily"/>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/background"
+                    android:layout_marginLeft="35dp"
+                    android:layout_marginRight="35dp"
+                    android:layout_marginBottom="15dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/lyprobuffet"
+                        android:layout_width="110dp"
+                        android:layout_height="110dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/custom_button"
+                        android:gravity="center"
+                        android:layout_marginRight="40dp"
+                        android:orientation="vertical">
+
+                        <ImageButton
+                            android:id="@+id/btnprobuffet"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:background="@drawable/ic_delivery_svg" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="8dp"
+                            android:gravity="center"
+                            android:text="@string/fooddeliver"
+                            android:textColor="@color/text"
+                            android:textSize="14dp"
+                            android:fontFamily="@font/fontfamily"/>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/lybuffet"
+                        android:layout_width="110dp"
+                        android:layout_height="110dp"
+                        android:layout_gravity="center"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/custom_button"
+                        android:gravity="center"
+
+                        android:orientation="vertical">
+
+                        <ImageButton
+                            android:id="@+id/btnbuffet"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:background="@drawable/ic_bufe_svg" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="8dp"
+                            android:gravity="center"
+                            android:text="@string/bufe"
+                            android:textColor="@color/text"
+                            android:textSize="14dp"
+                            android:fontFamily="@font/fontfamily"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>

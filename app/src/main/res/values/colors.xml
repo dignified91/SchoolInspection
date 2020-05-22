@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#5CBB5F</color>
+    <color name="colorPrimaryDark">#3C8D3F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="background">#ffffff</color>
+    <color name="toolbar">#075983</color>
+    <color name="errorbutton">#e45e5a</color>
+    <color name="errorbuttonend">#662b24</color>
+    <color name="formbutton">#cc78b3</color>
+    <color name="formbuttonend">#4d123b</color>
+    <color name="text">#241616</color>
+    <color name="shadow">#2d70ac</color>
+    <color name="end">#5cac2d</color>
+    <color name="shadowe">#FF35631A</color>
+    <color name="backcardview">#d6dde4</color>
+    <color name="textcardview">#000</color>
+    <color name="card">#514f4f</color>
+
+    <color name="backcardview2">#F0DCE2</color>
+    <color name="toolbar2">#95244F</color>
+    <color name="text2">#661835</color>
+    <color name="yellow">#FFEB3B</color>
+
+    <color name="toolbar3">#018679</color>
+    <color name="text3">#025249</color>
+
+    <color name="toolbar4">#623785</color>
+    <color name="text4">#461363</color>
+
+    <color name="toolbar6">#E6731E</color>
+    <color name="text6">#4E3001</color>
+
+    <color name="toolbar5">#3C8D3F</color>
+    <color name="text5">#284928</color>
+
+</resources>
