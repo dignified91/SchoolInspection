@@ -11,7 +11,7 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Matrix;
 import android.graphics.Typeface;
-import android.media.ExifInterface;
+
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Build;
@@ -36,6 +36,7 @@ import android.widget.Toast;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.FileProvider;
+import androidx.exifinterface.media.ExifInterface;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -56,6 +57,7 @@ import org.json.JSONObject;
 import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.IOException;
+import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -64,6 +66,7 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Locale;
 import java.util.Map;
+import java.util.Objects;
 import java.util.Random;
 
 import iso.my.com.inspectionstudentorganization.GeneralClass.App;
@@ -99,6 +102,7 @@ public class SendErrorProUniForm extends ActivityEnhanced {
     private String currentPicturePath = "";
 
 
+    @RequiresApi(api = Build.VERSION_CODES.KITKAT)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -109,12 +113,12 @@ public class SendErrorProUniForm extends ActivityEnhanced {
 
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.KITKAT)
     private void set() {
         //=====================================================================
         TextView toolbar_title = findViewById(R.id.toolbar_title);
         toolbar_title.setText(R.string.toolbarsenderror);
-        Typeface face = Typeface.createFromAsset(getAssets(), "fonts/Yekan.ttf");
-        toolbar_title.setTypeface(face);
+
 
         //====================================================================
         back = findViewById(R.id.back);
@@ -133,14 +137,25 @@ public class SendErrorProUniForm extends ActivityEnhanced {
 
             else {
                 Toast.makeText(getApplicationContext(), "تخلف مورد نظر ثبت شد.", Toast.LENGTH_LONG).show();
-                submiterrornopic();
+                try {
+                    submiterrornopic();
+                } catch (UnsupportedEncodingException e) {
+                    e.printStackTrace();
+                }
             }
         });
         sendphoto = findViewById(R.id.sendphoto);
-        sendphoto.setOnClickListener(v -> getdataerror());
+        sendphoto.setOnClickListener(v -> {
+            try {
+                getdataerror();
+            } catch (UnsupportedEncodingException e) {
+                e.printStackTrace();
+            }
+        });
     }
 
-    private void submiterrornopic() {
+    @RequiresApi(api = Build.VERSION_CODES.KITKAT)
+    private void submiterrornopic() throws UnsupportedEncodingException {
 
         pref = getSharedPreferences("myprefs", MODE_PRIVATE);
         id = Integer.parseInt(pref.getString("last_id", "0"));
@@ -158,13 +173,13 @@ public class SendErrorProUniForm extends ActivityEnhanced {
 
         System.out.println(URI_SENDEXP
                 + "?ins_sch_id=" + id
-                + "&inf_id=" + (values.get(errorspinner.getSelectedItemPosition()))[KEY_VALUE_ID]
+                + "&inf_id=" + (Objects.requireNonNull(values.get(errorspinner.getSelectedItemPosition())))[KEY_VALUE_ID]
                 + "&type=" + typeId
-                + "&des=" + URLEncoder.encode(desc));
+                + "&des=" + URLEncoder.encode(desc, java.nio.charset.StandardCharsets.UTF_8.toString()));
         JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(
                 URI_SENDEXP
                         + "?ins_sch_id=" + id
-                        + "&inf_id=" + (values.get(errorspinner.getSelectedItemPosition()))[KEY_VALUE_ID]
+                        + "&inf_id=" + (Objects.requireNonNull(values.get(errorspinner.getSelectedItemPosition())))[KEY_VALUE_ID]
                         + "&type=" + typeId
                         + "&des=" + URLEncoder.encode(desc), response ->
         {
@@ -313,7 +328,8 @@ public class SendErrorProUniForm extends ActivityEnhanced {
         }
     }
 
-    private void getdataerror() {
+    @RequiresApi(api = Build.VERSION_CODES.KITKAT)
+    private void getdataerror() throws UnsupportedEncodingException {
 
         pref = getSharedPreferences("myprefs", MODE_PRIVATE);
         id = Integer.parseInt(pref.getString("last_id", "0"));
@@ -331,15 +347,15 @@ public class SendErrorProUniForm extends ActivityEnhanced {
 
         System.out.println(URI_SENDEXP
                 + "?ins_sch_id=" + id
-                + "&inf_id=" + (values.get(errorspinner.getSelectedItemPosition()))[KEY_VALUE_ID]
+                + "&inf_id=" + (Objects.requireNonNull(values.get(errorspinner.getSelectedItemPosition())))[KEY_VALUE_ID]
                 + "&type=" + typeId
                 + "&des=" + URLEncoder.encode(desc));
         JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(
                 URI_SENDEXP
                         + "?ins_sch_id=" + id
-                        + "&inf_id=" + (values.get(errorspinner.getSelectedItemPosition()))[KEY_VALUE_ID]
+                        + "&inf_id=" + (Objects.requireNonNull(values.get(errorspinner.getSelectedItemPosition())))[KEY_VALUE_ID]
                         + "&type=" + typeId
-                        + "&des=" + URLEncoder.encode(desc), response ->
+                        + "&des=" + URLEncoder.encode(desc, java.nio.charset.StandardCharsets.UTF_8.toString()), response ->
         {
 
             for (int i = 0; i < response.length(); i++) {
@@ -750,9 +766,5 @@ public class SendErrorProUniForm extends ActivityEnhanced {
     }
 
     //add font
-    @Override
-    protected void attachBaseContext(Context newBase) {
-        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
 
-    }
 }

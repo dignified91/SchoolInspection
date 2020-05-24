@@ -57,8 +57,7 @@ public class DetailOfficeSch extends AppCompatActivity {
     private void setui() {
         TextView toolbar_title = findViewById(R.id.toolbar_title);
         toolbar_title.setText(R.string.toolbardetailoffsch);
-        Typeface face = Typeface.createFromAsset(getAssets(), "fonts/Yekan.ttf");
-        toolbar_title.setTypeface(face);
+
 
         imageView=findViewById(R.id.image);
 
@@ -134,9 +133,5 @@ public class DetailOfficeSch extends AppCompatActivity {
         }
     }
 
-    @Override
-    protected void attachBaseContext(Context newBase) {
-        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
 
-    }
 }

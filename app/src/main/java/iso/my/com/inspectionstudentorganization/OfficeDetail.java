@@ -1,6 +1,7 @@
 package iso.my.com.inspectionstudentorganization;
 
 import android.Manifest;
+import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.Intent;
@@ -108,13 +109,13 @@ public class OfficeDetail extends AppCompatActivity implements OnMapReadyCallbac
         getdet();
     }
 
+    @SuppressLint("CutPasteId")
     private void set() {
         //====================================================================
 
         TextView toolbar_title = findViewById(R.id.toolbar_title);
         toolbar_title.setText(R.string.toolbardetailoffice);
-        Typeface face = Typeface.createFromAsset(getAssets(), "fonts/Yekan.ttf");
-        toolbar_title.setTypeface(face);
+
         //====================================================================
 
         exp = findViewById(R.id.exp);
@@ -164,7 +165,7 @@ public class OfficeDetail extends AppCompatActivity implements OnMapReadyCallbac
 
                 SharedPreferences.Editor editor = pref.edit();
                 editor.clear();
-                editor.commit();
+                editor.apply();
                 // onclickBtnEnd();
                 Intent intent = new Intent(getApplicationContext(), MainMenuOffice.class);
                 startActivity(intent);
@@ -269,7 +270,7 @@ public class OfficeDetail extends AppCompatActivity implements OnMapReadyCallbac
 
 
         if (startt.isStartedHome()) {
-
+            System.out.println("uri:" + "");
 
         } else Toast.makeText(App.getContext(), "خطا", Toast.LENGTH_LONG).show();
 
@@ -349,7 +350,7 @@ public class OfficeDetail extends AppCompatActivity implements OnMapReadyCallbac
         pref = getSharedPreferences("myprefs", MODE_PRIVATE);
         // id = Integer.parseInt(pref.getString("last__id", "0"));
         id = pref.getString("last__id", "0");
-        if (id == "0") {
+        if (id.equals("0")) {
             Log.d("mm", "hey nothing is in id ");
             return;
 
@@ -426,12 +427,14 @@ public class OfficeDetail extends AppCompatActivity implements OnMapReadyCallbac
 
 
     //httputils for send parametr post method
+    @SuppressLint("StaticFieldLeak")
     public class MyTask extends AsyncTask<MyHttpUtils.RequestData, Void, String> {
 
 
         @Override
         protected void onPreExecute() {
             if (tasks.isEmpty()) {
+                System.out.println("uri:" + "");
             }
             tasks.add(this);
         }
@@ -451,6 +454,7 @@ public class OfficeDetail extends AppCompatActivity implements OnMapReadyCallbac
             //  tv.setText(result);
             tasks.remove(this);
             if (tasks.isEmpty()) {
+                System.out.println("uri:" + "");
             }
         }
     }
@@ -509,7 +513,7 @@ public class OfficeDetail extends AppCompatActivity implements OnMapReadyCallbac
         AlertDialog.Builder builder = new AlertDialog.Builder(OfficeDetail.this);
 
         LayoutInflater inflater = getLayoutInflater();
-        View dialogView = inflater.inflate(R.layout.office_popup, null);
+        @SuppressLint("InflateParams") View dialogView = inflater.inflate(R.layout.office_popup, null);
 
         builder.setView(dialogView);
 
@@ -545,8 +549,7 @@ dialog.dismiss();
         bmp.compress(Bitmap.CompressFormat.JPEG, 60, baos);
 
         byte[] imageBytes = baos.toByteArray();
-        String encodedImage = Base64.encodeToString(imageBytes, Base64.DEFAULT);
-        return encodedImage;
+        return Base64.encodeToString(imageBytes, Base64.DEFAULT);
     }
 
     private void asyncsendform() {
@@ -554,7 +557,7 @@ dialog.dismiss();
         pref = getSharedPreferences("myprefs", MODE_PRIVATE);
         id = pref.getString("last__id", "0");
 
-        if (id == "0") {
+        if (id.equals("0")) {
             finish();
             return;
         }
@@ -564,8 +567,8 @@ dialog.dismiss();
 
 
         MyHttpUtils.RequestData requestData = new MyHttpUtils.RequestData(UPLOAD_URL, "POST");
-        requestData.setParameter("image", image.toString());
-        Log.d("asfimage", image.toString());
+        requestData.setParameter("image", image);
+        Log.d("asfimage", image);
         requestData.setParameter("type", "leader");
         requestData.setParameter("id", String.valueOf(id));
         Log.d("id :", String.valueOf(id));
@@ -632,11 +635,7 @@ dialog.dismiss();
     }
 
     //add font
-    @Override
-    protected void attachBaseContext(Context newBase) {
-        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
 
-    }
 
     @Override
     public void onClick(int i, int pos, boolean isChecked) {

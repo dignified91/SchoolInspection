@@ -69,8 +69,7 @@ public class SchoolLocation extends AppCompatActivity implements OnMapReadyCallb
         //=====================================================================
         TextView toolbar_title = findViewById(R.id.toolbar_title);
         toolbar_title.setText(R.string.toolbarschlocation);
-        Typeface face = Typeface.createFromAsset(getAssets(), "fonts/Yekan.ttf");
-        toolbar_title.setTypeface(face);
+
 
         //====================================================================
 
@@ -302,9 +301,5 @@ public class SchoolLocation extends AppCompatActivity implements OnMapReadyCallb
     }
 
     //font
-    @Override
-    protected void attachBaseContext(Context newBase) {
-        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
 
-    }
 }

@@ -1,5 +1,6 @@
 package iso.my.com.inspectionstudentorganization;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.graphics.Typeface;
@@ -33,13 +34,13 @@ public class IdentifyOfficeCard extends AppCompatActivity {
         changeStatusBarColor();
     }
 
+    @SuppressLint("SetTextI18n")
     private void set() {
 
         //=====================================================================
         TextView toolbar_title = findViewById(R.id.toolbar_title);
         toolbar_title.setText(R.string.toolbaridcard);
-        Typeface face = Typeface.createFromAsset(getAssets(), "fonts/Yekan.ttf");
-        toolbar_title.setTypeface(face);
+
 
         //====================================================================
 
@@ -119,11 +120,7 @@ public class IdentifyOfficeCard extends AppCompatActivity {
     }
 
     //set font
-    @Override
-    protected void attachBaseContext(Context newBase) {
-        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
 
-    }
 
 
 }

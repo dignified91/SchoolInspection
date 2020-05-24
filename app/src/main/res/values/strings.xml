@@ -95,89 +95,90 @@
     <string name="formname" translatable="false">عنوان فرم</string>
     <string name="toolbarsendparentform" translatable="false">پرسش نامه لباس فرم سطح اولیا</string>
     <string name="toolbarsendschoolform" translatable="false">پرسش نامه لباس فرم سطح مدرسه</string>
-    <string name="sweing">تولیدی</string>
-    <string name="cloth">لباس فرم</string>
-    <string name="service">سرویس </string>
-    <string name="office"> پیمانکار</string>
-    <string name="bufe">بوفه</string>
-    <string name="sazman">سازمان دانش آموزی</string>
-    <string name="fooddeliver">  پخش تغذیه</string>
-    <string name="toolbardetailproform">جزئیات تولیدی</string>
-    <string name="proname">نام تولیدی</string>
-    <string name="proname_">نام تولیدی :</string>
-    <string name="promanager_">مدیریت :</string>
-    <string name="promanager">مدیریت</string>
-    <string name="proaddress_">آدرس :</string>
-    <string name="proaddress">آدرس</string>
-    <string name="prophone">تلفن تولیدی</string>
-    <string name="prophone_">تلفن تولیدی :</string>
-    <string name="formname1">تولیدی متناسب با ظرفیت تولید سفارش دریافت کرده است؟</string>
-    <string name="formname2">تولیدی مطابق قرارداد سفارشات را تحویل گرفته است؟</string>
-    <string name="formname3">تولیدی بنر قیمت را در معرض دید اولیا قرار داده است ؟</string>
-    <string name="formname4">تولیدی همکاری لازم جهت امور بازرسی را انجام داده است ؟</string>
-    <string name="formname5">تولیدی استاندارد ای لازم در خصوص دوخت رعایت کرده است؟</string>
-    <string name="formname6">تولیدی سفارشات خود را به غیر وادار کرده است ؟</string>
-    <string name="formname7">تولیدی سفارشی خارج از مسیر سامانه لباس فرم دریافت کرده است ؟</string>
-    <string name="sendproform">ارسال پرسش نامه تولیدی</string>
-    <string name="submitbuffet">ثبت اطلاعات بوفه</string>
-    <string name="sendformbuffet">فرم ارزیابی بوفه</string>
-    <string name="manufactures">شرکت های تولید کننده</string>
-    <string name="bfname_">نام  :</string>
-    <string name="bfname">نام</string>
-    <string name="mobile_">تلفن همراه :</string>
-    <string name="mobile">تلفن همراه</string>
-    <string name="number_">شماره ثبت :</string>
-    <string name="number">شماره ثبت</string>
-    <string name="distance2">عرض</string>
-    <string name="distance3">ارتفاع</string>
-    <string name="distance1">طول</string>
-    <string name="distance_">ابعاد :</string>
-    <string name="date_">تاریخ :</string>
-    <string name="date">----/--/--</string>
-    <string name="toolbarbuffetinfo">اطلاعات بوفه</string>
-    <string name="toolbarsendformvalue">فرم ارزیابی</string>
-    <string name="toolbarsubmanufacture">اطلاعات شرکت تولید کننده</string>
-    <string name="factoryname_">نام شرکت :</string>
-    <string name="factoryname">نام شرکت</string>
-    <string name="Distributor_">توزیع کننده :</string>
-    <string name="Distributor">توزیع کننده</string>
-    <string name="brand">برند</string>
-    <string name="brand_">برند :</string>
-    <string name="submitfactory">ثبت تولید کننده</string>
-    <string name="gender_">جنسیت :</string>
-    <string name="gender">جنسیت</string>
-    <string name="type_">مقطع :</string>
-    <string name="type">مقطع</string>
-    <string name="sendphoto">ارسال عکس</string>
-    <string name="comeback">بازگشت</string>
-    <string name="schname_">نام مدرسه :</string>
-    <string name="schname">نام مدرسه</string>
-    <string name="schcode_">کد مدرسه :</string>
-    <string name="schcode">کد مدرسه</string>
-    <string name="gcode_">کد رهگیری :</string>
-    <string name="gcode">کد رهگیری</string>
-    <string name="pay_">مبلغ :</string>
-    <string name="pay">مبلغ</string>
-    <string name="ddd">تاریخ</string>
-    <string name="contract">کنترل قرارداد پیمانکار</string>
-    <string name="gcode_ofcode_schcode">کد مورد نظر را وارد کنید...</string>
-    <string name="checkcontract">بررسی قرارداد</string>
-    <string name="clear_pad">پاک کردن</string>
-    <string name="save_signature">ذخیره امضا</string>
-    <string name="sign">ثبت تایید کننده</string>
-    <string name="sendform3">فرم ارزیابی پیمانکار شماره 2</string>
-    <string name="sendform2">فرم ارزیابی پیمانکار شماره 1</string>
-    <string name="sendform1">فرم ارزیابی مدرسه </string>
-    <string name="paymentfactor">ثبت فیش واریزی</string>
-    <string name="numberbill">شماره فیش </string>
-    <string name="numberbill_">شماره فیش :</string>
-    <string name="payment_">مبلغ :</string>
-    <string name="payment">مبلغ</string>
-    <string name="priceexp">لطفا فیش واریزی دو درصدی مدرسه بابت سهم نظارت و فرهنگی به حساب سازمان دانش آموزی در این قسمت ثبت شده و تصویری از فیش را بارگزاری نمایید.</string>
-    <string name="price_">" مبلغ :"</string>
-    <string name="toolbarsubmitbill">ثبت فیش واریزی</string>
-    <string name="submitfish">" ثبت اطلاعات فیش واریزی"</string>
-    <string name="toman">ریال</string>
+    <string name="sweing" translatable="false">تولیدی</string>
+    <string name="cloth" translatable="false">لباس فرم</string>
+    <string name="service" translatable="false">سرویس </string>
+    <string name="office" translatable="false"> پیمانکار</string>
+    <string name="bufe" translatable="false">بوفه</string>
+    <string name="sazman" translatable="false">سازمان دانش آموزی</string>
+    <string name="fooddeliver" translatable="false">  پخش تغذیه</string>
+    <string name="toolbardetailproform" translatable="false">جزئیات تولیدی</string>
+    <string name="proname" translatable="false">نام تولیدی</string>
+    <string name="proname_" translatable="false">نام تولیدی :</string>
+    <string name="promanager_" translatable="false">مدیریت :</string>
+    <string name="promanager" translatable="false">مدیریت</string>
+    <string name="proaddress_" translatable="false">آدرس :</string>
+    <string name="proaddress" translatable="false">آدرس</string>
+    <string name="prophone" translatable="false">تلفن تولیدی</string>
+    <string name="prophone_" translatable="false">تلفن تولیدی :</string>
+    <string name="formname1" translatable="false">تولیدی متناسب با ظرفیت تولید سفارش دریافت کرده است؟</string>
+    <string name="formname2" translatable="false">تولیدی مطابق قرارداد سفارشات را تحویل گرفته است؟</string>
+    <string name="formname3" translatable="false">تولیدی بنر قیمت را در معرض دید اولیا قرار داده است ؟</string>
+    <string name="formname4" translatable="false">تولیدی همکاری لازم جهت امور بازرسی را انجام داده است ؟</string>
+    <string name="formname5" translatable="false">تولیدی استاندارد ای لازم در خصوص دوخت رعایت کرده است؟</string>
+    <string name="formname6" translatable="false">تولیدی سفارشات خود را به غیر وادار کرده است ؟</string>
+    <string name="formname7" translatable="false">تولیدی سفارشی خارج از مسیر سامانه لباس فرم دریافت کرده است ؟</string>
+    <string name="sendproform" translatable="false">ارسال پرسش نامه تولیدی</string>
+    <string name="submitbuffet" translatable="false">ثبت اطلاعات بوفه</string>
+    <string name="sendformbuffet" translatable="false">فرم ارزیابی بوفه</string>
+    <string name="manufactures" translatable="false">شرکت های تولید کننده</string>
+    <string name="bfname_" translatable="false">نام  :</string>
+    <string name="bfname" translatable="false">نام</string>
+    <string name="mobile_" translatable="false">تلفن همراه :</string>
+    <string name="mobile" translatable="false">تلفن همراه</string>
+    <string name="number_" translatable="false">شماره ثبت :</string>
+    <string name="number" translatable="false">شماره ثبت</string>
+    <string name="distance2" translatable="false">عرض</string>
+    <string name="distance3" translatable="false">ارتفاع</string>
+    <string name="distance1" translatable="false">طول</string>
+    <string name="distance_" translatable="false">ابعاد :</string>
+    <string name="date_" translatable="false">تاریخ :</string>
+    <string name="date" translatable="false">----/--/--</string>
+    <string name="toolbarbuffetinfo" translatable="false">اطلاعات بوفه</string>
+    <string name="toolbarsendformvalue" translatable="false">فرم ارزیابی</string>
+    <string name="toolbarsubmanufacture" translatable="false">اطلاعات شرکت تولید کننده</string>
+    <string name="factoryname_" translatable="false">نام شرکت :</string>
+    <string name="factoryname" translatable="false">نام شرکت</string>
+    <string name="Distributor_" translatable="false">توزیع کننده :</string>
+    <string name="Distributor" translatable="false">توزیع کننده</string>
+    <string name="brand" translatable="false">برند</string>
+    <string name="brand_" translatable="false">برند :</string>
+    <string name="submitfactory" translatable="false">ثبت تولید کننده</string>
+    <string name="gender_" translatable="false">جنسیت :</string>
+    <string name="gender" translatable="false">جنسیت</string>
+    <string name="type_" translatable="false">مقطع :</string>
+    <string name="type" translatable="false">مقطع</string>
+    <string name="sendphoto" translatable="false">ارسال عکس</string>
+    <string name="comeback" translatable="false">بازگشت</string>
+    <string name="schname_" translatable="false">نام مدرسه :</string>
+    <string name="schname" translatable="false">نام مدرسه</string>
+    <string name="schcode_" translatable="false">کد مدرسه :</string>
+    <string name="schcode" translatable="false">کد مدرسه</string>
+    <string name="gcode_" translatable="false">کد رهگیری :</string>
+    <string name="gcode" translatable="false">کد رهگیری</string>
+    <string name="pay_" translatable="false">مبلغ :</string>
+    <string name="pay" translatable="false">مبلغ</string>
+    <string name="ddd" translatable="false">تاریخ</string>
+    <string name="contract" translatable="false">کنترل قرارداد پیمانکار</string>
+    <string name="gcode_ofcode_schcode" translatable="false">کد مورد نظر را وارد کنید...</string>
+    <string name="checkcontract" translatable="false">بررسی قرارداد</string>
+    <string name="clear_pad" translatable="false">پاک کردن</string>
+    <string name="save_signature" translatable="false">ذخیره امضا</string>
+    <string name="sign" translatable="false">ثبت تایید کننده</string>
+    <string name="sendform3" translatable="false">فرم ارزیابی پیمانکار شماره 2</string>
+    <string name="sendform2" translatable="false">فرم ارزیابی پیمانکار شماره 1</string>
+    <string name="sendform1" translatable="false">فرم ارزیابی مدرسه </string>
+    <string name="paymentfactor" translatable="false">ثبت فیش واریزی</string>
+    <string name="numberbill" translatable="false">شماره فیش </string>
+    <string name="numberbill_" translatable="false">شماره فیش :</string>
+    <string name="payment_" translatable="false">مبلغ :</string>
+    <string name="payment" translatable="false">مبلغ</string>
+    <string name="priceexp" translatable="false">لطفا فیش واریزی دو درصدی مدرسه بابت سهم نظارت و فرهنگی به حساب سازمان دانش آموزی در این قسمت ثبت شده و تصویری از فیش را بارگزاری نمایید.</string>
+    <string name="price_" translatable="false">" مبلغ :"</string>
+    <string name="toolbarsubmitbill" translatable="false">ثبت فیش واریزی</string>
+    <string name="submitfish" translatable="false">" ثبت اطلاعات فیش واریزی"</string>
+    <string name="toman" translatable="false">ریال</string>
+    <string name="submitt" translatable="false">اطلاعات با موفقیت ثبت شد.</string>
 
 
 </resources>

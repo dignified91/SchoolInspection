@@ -1,5 +1,6 @@
 package iso.my.com.inspectionstudentorganization;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Typeface;
@@ -16,6 +17,7 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -28,6 +30,7 @@ public class SupportActivity extends AppCompatActivity {
     WebView mwebView;
     String url = "http://sns.tehranedu.ir/mobile/support/supportins.htm";
 
+    @RequiresApi(api = Build.VERSION_CODES.P)
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_support);
@@ -41,22 +44,19 @@ public class SupportActivity extends AppCompatActivity {
         back = findViewById(R.id.back);
         back.setOnClickListener(v -> onBackPressed());
 
-        //=====================================================================
+
         TextView toolbar_title = findViewById(R.id.toolbar_title);
         toolbar_title.setText(R.string.toolbarsupport);
-        Typeface face = Typeface.createFromAsset(getAssets(), "fonts/Yekan.ttf");
-        toolbar_title.setTypeface(face);
-
-        //====================================================================
-
-
     }
 
+    @SuppressLint("SetJavaScriptEnabled")
+    @RequiresApi(api = Build.VERSION_CODES.P)
     public void initFields() {
         // TODO Auto-generated method stub
 
         mwebView = findViewById(R.id.webview);
 
+//        mwebView.setDataDirectorySuffix("dir_name_no_separator");
         mwebView.getSettings().setJavaScriptEnabled(true);
         mwebView.getSettings().setBuiltInZoomControls(false);
         mwebView.getSettings().setNeedInitialFocus(false);
@@ -65,6 +65,7 @@ public class SupportActivity extends AppCompatActivity {
 
     }
 
+    @SuppressLint("AddJavascriptInterface")
     public void setListeners() {
         // TODO Auto-generated method stub
 
@@ -98,6 +99,7 @@ public class SupportActivity extends AppCompatActivity {
             i.setData(Uri.parse(url));
             startActivity(i);
         });
+
     }
 
 
@@ -136,9 +138,5 @@ public class SupportActivity extends AppCompatActivity {
         }
     }
 
-    @Override
-    protected void attachBaseContext(Context newBase) {
-        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
 
-    }
 }

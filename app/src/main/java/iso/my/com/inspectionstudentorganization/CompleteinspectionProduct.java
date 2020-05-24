@@ -44,8 +44,7 @@ public class CompleteinspectionProduct extends AppCompatActivity {
         //=====================================================================
         TextView toolbar_title = findViewById(R.id.toolbar_title);
         toolbar_title.setText(R.string.toolbarcompleteins);
-        Typeface face = Typeface.createFromAsset(getAssets(), "fonts/Yekan.ttf");
-        toolbar_title.setTypeface(face);
+
 
         //====================================================================
 
@@ -116,7 +115,7 @@ public class CompleteinspectionProduct extends AppCompatActivity {
             if (result.getContents() == null) {
 
                 //  Toast.makeText(this, "Cancelled", Toast.LENGTH_LONG).show();
-
+                System.out.println("uri:" + "cancle");
             } else {
 
                 System.out.println("uri:" + result.getContents());
@@ -153,10 +152,6 @@ public class CompleteinspectionProduct extends AppCompatActivity {
         }
     }
 
-    @Override
-    protected void attachBaseContext(Context newBase) {
-        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
 
-    }
 
 }

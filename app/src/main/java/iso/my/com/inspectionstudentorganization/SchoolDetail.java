@@ -1,6 +1,7 @@
 package iso.my.com.inspectionstudentorganization;
 
 import android.Manifest;
+import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
 import android.app.AlertDialog;
 import android.content.Context;
@@ -155,14 +156,14 @@ public class SchoolDetail extends AppCompatActivity implements OnMapReadyCallbac
 
         TextView toolbar_title = findViewById(R.id.toolbar_title);
         toolbar_title.setText(R.string.toolbardetailschool);
-        Typeface face = Typeface.createFromAsset(getAssets(), "fonts/Yekan.ttf");
-        toolbar_title.setTypeface(face);
+
         //====================================================================
 
 
 ///map
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
+        assert mapFragment != null;
         mapFragment.getMapAsync(this);
 
         ///map
@@ -211,7 +212,7 @@ public class SchoolDetail extends AppCompatActivity implements OnMapReadyCallbac
     public void onLocationChanged(Location location) {
 
         try {
-
+            System.out.println("log:" + "");
 //            LatLng myCoordinates = new LatLng(location.getLatitude(), location.getLongitude());
 //            mMap.moveCamera(CameraUpdateFactory.newLatLng(myCoordinates));
 //
@@ -239,6 +240,7 @@ public class SchoolDetail extends AppCompatActivity implements OnMapReadyCallbac
 
     }
 
+    @SuppressLint("MissingPermission")
     private void requestLocation() {
         Criteria criteria = new Criteria();
         criteria.setAccuracy(Criteria.ACCURACY_FINE);
@@ -396,12 +398,14 @@ public class SchoolDetail extends AppCompatActivity implements OnMapReadyCallbac
     }
 
     //httputils for send parametr post method
+    @SuppressLint("StaticFieldLeak")
     public class MyTask extends AsyncTask<MyHttpUtils.RequestData, Void, String> {
 
 
         @Override
         protected void onPreExecute() {
             if (tasks.isEmpty()) {
+                System.out.println("log:" + "");
                 //  pb.setVisibility(View.VISIBLE);
             }
             tasks.add(this);
@@ -422,6 +426,7 @@ public class SchoolDetail extends AppCompatActivity implements OnMapReadyCallbac
             //  tv.setText(result);
             tasks.remove(this);
             if (tasks.isEmpty()) {
+                System.out.println("log:" + "");
                 //   pb.setVisibility(View.INVISIBLE);
             }
         }
@@ -534,10 +539,6 @@ public class SchoolDetail extends AppCompatActivity implements OnMapReadyCallbac
     }
 
     //add font
-    @Override
-    protected void attachBaseContext(Context newBase) {
-        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
 
-    }
 }
 

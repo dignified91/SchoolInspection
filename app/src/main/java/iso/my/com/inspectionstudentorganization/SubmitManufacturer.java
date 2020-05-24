@@ -1,5 +1,6 @@
 package iso.my.com.inspectionstudentorganization;
 
+import android.annotation.SuppressLint;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
@@ -54,8 +55,7 @@ public class SubmitManufacturer extends AppCompatActivity {
         //=====================================================================
         TextView toolbar_title = findViewById(R.id.toolbar_title);
         toolbar_title.setText(R.string.toolbarsubmanufacture);
-        Typeface face = Typeface.createFromAsset(getAssets(), "fonts/Yekan.ttf");
-        toolbar_title.setTypeface(face);
+
 
         //====================================================================
         back = findViewById(R.id.back);
@@ -126,7 +126,7 @@ public class SubmitManufacturer extends AppCompatActivity {
 
         );
 
-        JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(
+        @SuppressLint("SetTextI18n") JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(
                 URI_BUFFETFACTORY
                         + "?ins_id=" + id
                         + "&factory=" + URLEncoder.encode(factory)
@@ -193,10 +193,6 @@ public class SubmitManufacturer extends AppCompatActivity {
     }
 
     //add font
-    @Override
-    protected void attachBaseContext(Context newBase) {
-        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
 
-    }
 
 }

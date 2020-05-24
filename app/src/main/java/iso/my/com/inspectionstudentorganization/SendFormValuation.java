@@ -1,5 +1,6 @@
 package iso.my.com.inspectionstudentorganization;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.graphics.Typeface;
@@ -47,8 +48,7 @@ public class SendFormValuation extends AppCompatActivity {
         //=====================================================================
         TextView toolbar_title = findViewById(R.id.toolbar_title);
         toolbar_title.setText(R.string.toolbarsendformvalue);
-        Typeface face = Typeface.createFromAsset(getAssets(), "fonts/Yekan.ttf");
-        toolbar_title.setTypeface(face);
+
         //====================================================================
 
         back = findViewById(R.id.back);
@@ -56,6 +56,7 @@ public class SendFormValuation extends AppCompatActivity {
     }
 
 
+    @SuppressLint("SetJavaScriptEnabled")
     public void initFields() {
         // TODO Auto-generated method stub
 
@@ -69,6 +70,7 @@ public class SendFormValuation extends AppCompatActivity {
 
     }
 
+    @SuppressLint("AddJavascriptInterface")
     public void setListeners() {
         // TODO Auto-generated method stub
         pref = getSharedPreferences("myprefs", MODE_PRIVATE);
@@ -138,10 +140,6 @@ public class SendFormValuation extends AppCompatActivity {
         }
     }
 
-    @Override
-    protected void attachBaseContext(Context newBase) {
-        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
 
-    }
 
 }

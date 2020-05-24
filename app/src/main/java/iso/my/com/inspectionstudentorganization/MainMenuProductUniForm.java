@@ -1,5 +1,6 @@
 package iso.my.com.inspectionstudentorganization;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -187,13 +188,14 @@ public class MainMenuProductUniForm extends AppCompatActivity implements SwipeRe
                 e.printStackTrace();
 
             }
-        }, error -> error.printStackTrace());
+        }, Throwable::printStackTrace);
         int socketTimeout = 30000;
         RetryPolicy policy = new DefaultRetryPolicy(socketTimeout, DefaultRetryPolicy.DEFAULT_MAX_RETRIES, DefaultRetryPolicy.DEFAULT_BACKOFF_MULT);
         stringRequest.setRetryPolicy(policy);
         requestQueue.add(stringRequest);
     }
 
+    @SuppressLint("SetTextI18n")
     private void showdata() {
         if (driverData != null) {
             tv_name.setText(driverData.getName() + " " + driverData.getFamily() + " - " + "منطقه " + driverData.getRegion());
@@ -240,7 +242,7 @@ public class MainMenuProductUniForm extends AppCompatActivity implements SwipeRe
                 e.printStackTrace();
 
             }
-        }, error -> error.printStackTrace());
+        }, Throwable::printStackTrace);
 
 
         int socketTimeout = 30000;
@@ -299,10 +301,6 @@ public class MainMenuProductUniForm extends AppCompatActivity implements SwipeRe
     }
 
     //set font
-    @Override
-    protected void attachBaseContext(Context newBase) {
-        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
 
-    }
 
 }

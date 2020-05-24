@@ -74,8 +74,7 @@ public class Contract extends AppCompatActivity {
         //=====================================================================
         TextView toolbar_title = findViewById(R.id.toolbar_title);
         toolbar_title.setText(R.string.checkcontract);
-        Typeface face = Typeface.createFromAsset(getAssets(), "fonts/Yekan.ttf");
-        toolbar_title.setTypeface(face);
+
         //====================================================================
         ed_office = findViewById(R.id.txtname_or_subcode);
 
@@ -115,12 +114,9 @@ public class Contract extends AppCompatActivity {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setCancelable(false);
         builder.setMessage("تخلف مورد نظر ثبت شد.");
-        builder.setPositiveButton("باشه!", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                //  Intent intent = new Intent(getApplicationContext(), Menu.class);
-                //   startActivity(intent);
-            }
+        builder.setPositiveButton("باشه!", (dialog, which) -> {
+            //  Intent intent = new Intent(getApplicationContext(), Menu.class);
+            //   startActivity(intent);
         });
 
         AlertDialog alert = builder.create();
@@ -178,7 +174,6 @@ public class Contract extends AppCompatActivity {
                     getlist();
 
                 } catch (JSONException matin) {
-                    System.out.println(matin);
 
                     matin.printStackTrace();
                     progressDialog.dismiss();
@@ -207,12 +202,9 @@ public class Contract extends AppCompatActivity {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setCancelable(false);
         builder.setMessage("قراردادی وجود ندارد.");
-        builder.setPositiveButton("باشه!", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                //  Intent intent = new Intent(getApplicationContext(), Menu.class);
-                //   startActivity(intent);
-            }
+        builder.setPositiveButton("باشه!", (dialog, which) -> {
+            //  Intent intent = new Intent(getApplicationContext(), Menu.class);
+            //   startActivity(intent);
         });
 
         AlertDialog alert = builder.create();
@@ -264,9 +256,5 @@ public class Contract extends AppCompatActivity {
         }
     }
 
-    @Override
-    protected void attachBaseContext(Context newBase) {
-        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
 
-    }
 }

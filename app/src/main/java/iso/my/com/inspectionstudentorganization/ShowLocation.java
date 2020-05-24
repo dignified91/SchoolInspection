@@ -68,8 +68,7 @@ public class ShowLocation extends AppCompatActivity implements OnMapReadyCallbac
         //=====================================================================
         TextView toolbar_title = findViewById(R.id.toolbar_title);
         toolbar_title.setText(R.string.toolbarlocation);
-        Typeface face = Typeface.createFromAsset(getAssets(), "fonts/Yekan.ttf");
-        toolbar_title.setTypeface(face);
+
 
         //====================================================================
         ///map
@@ -282,9 +281,5 @@ public class ShowLocation extends AppCompatActivity implements OnMapReadyCallbac
     }
 
     //font
-    @Override
-    protected void attachBaseContext(Context newBase) {
-        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
 
-    }
 }

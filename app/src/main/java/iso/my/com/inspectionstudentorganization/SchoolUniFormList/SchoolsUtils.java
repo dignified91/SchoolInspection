@@ -28,7 +28,7 @@ public class SchoolsUtils {
                 }
                 school.setName(json.getString("name"));
 
-                String status =  json.optString("statuslebas");
+                String status =  json.optString("Status");
 
                 InspectionType inspectionType = InspectionType.getTypeFromId(Integer.parseInt(status));
                  school.setInspectionType(inspectionType);

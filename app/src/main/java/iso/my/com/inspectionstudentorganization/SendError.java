@@ -1,5 +1,6 @@
 package iso.my.com.inspectionstudentorganization;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
@@ -9,8 +10,7 @@ import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Matrix;
-import android.graphics.Typeface;
-import android.media.ExifInterface;
+
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Build;
@@ -34,6 +34,7 @@ import android.widget.Toast;
 
 import androidx.annotation.RequiresApi;
 import androidx.core.content.FileProvider;
+import androidx.exifinterface.media.ExifInterface;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -61,6 +62,7 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Locale;
 import java.util.Map;
+import java.util.Objects;
 import java.util.Random;
 
 import iso.my.com.inspectionstudentorganization.GeneralClass.App;
@@ -69,7 +71,6 @@ import iso.my.com.inspectionstudentorganization.Models.SaveFile;
 import iso.my.com.inspectionstudentorganization.Models.SpType;
 import iso.my.com.inspectionstudentorganization.Models.Title;
 import iso.my.com.inspectionstudentorganization.utils.FileUtils;
-import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 
 public class SendError extends ActivityEnhanced {
@@ -93,7 +94,7 @@ public class SendError extends ActivityEnhanced {
     ArrayList<String> typeerror;
     SaveFile saveFile = null;
     ImageView imageViewer;
-    List<AsyncTask> tasks = new ArrayList<>();
+    List<AsyncTask<MyHttpUtils.RequestData, Void, String>> tasks = new ArrayList<>();
     private String currentPicturePath = "";
 
 
@@ -111,8 +112,7 @@ public class SendError extends ActivityEnhanced {
         //=====================================================================
         TextView toolbar_title = findViewById(R.id.toolbar_title);
         toolbar_title.setText(R.string.toolbarsenderror);
-        Typeface face = Typeface.createFromAsset(getAssets(), "fonts/Yekan.ttf");
-        toolbar_title.setTypeface(face);
+
 
         //====================================================================
         back = findViewById(R.id.back);
@@ -156,13 +156,13 @@ public class SendError extends ActivityEnhanced {
 
         System.out.println(URI_SENDEXP
                 + "?ins_sch_id=" + id
-                + "&inf_id=" + (values.get(errorspinner.getSelectedItemPosition()))[KEY_VALUE_ID]
+                + "&inf_id=" + (Objects.requireNonNull(values.get(errorspinner.getSelectedItemPosition())))[KEY_VALUE_ID]
                 + "&type=" + typeId
                 + "&des=" + URLEncoder.encode(desc));
         JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(
                 URI_SENDEXP
                         + "?ins_sch_id=" + id
-                        + "&inf_id=" + (values.get(errorspinner.getSelectedItemPosition()))[KEY_VALUE_ID]
+                        + "&inf_id=" + (Objects.requireNonNull(values.get(errorspinner.getSelectedItemPosition())))[KEY_VALUE_ID]
                         + "&type=" + typeId
                         + "&des=" + URLEncoder.encode(desc), response ->
         {
@@ -174,7 +174,7 @@ public class SendError extends ActivityEnhanced {
 
                     if (jsonObject.optString("status").equals("0")) {
                         // Toast.makeText(SendError.class, "ثبت اطلاعات با مشکل مواجه شد ، لطفا دوباره تلاش کنید.", Toast.LENGTH_LONG).show();
-
+                        Log.i("status", "st:" + 0);
 
                     } else {
                         saveid = jsonObject.getInt("Status");
@@ -221,7 +221,8 @@ public class SendError extends ActivityEnhanced {
             type.add("سامانه 1499");
 
         }
-        ArrayAdapter eradapter = new ArrayAdapter(SendError.this, android.R.layout.simple_spinner_dropdown_item, type);
+        ArrayAdapter<String> eradapter;
+        eradapter = new ArrayAdapter<>(SendError.this, android.R.layout.simple_spinner_dropdown_item, type);
         ertype.setAdapter(eradapter);
         ertype.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
 
@@ -353,13 +354,13 @@ public class SendError extends ActivityEnhanced {
 
         System.out.println(URI_SENDEXP
                 + "?ins_sch_id=" + id
-                + "&inf_id=" + (values.get(errorspinner.getSelectedItemPosition()))[KEY_VALUE_ID]
+                + "&inf_id=" + (Objects.requireNonNull(values.get(errorspinner.getSelectedItemPosition())))[KEY_VALUE_ID]
                 + "&type=" + typeId
                 + "&des=" + URLEncoder.encode(desc));
         JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(
                 URI_SENDEXP
                         + "?ins_sch_id=" + id
-                        + "&inf_id=" + (values.get(errorspinner.getSelectedItemPosition()))[KEY_VALUE_ID]
+                        + "&inf_id=" + (Objects.requireNonNull(values.get(errorspinner.getSelectedItemPosition())))[KEY_VALUE_ID]
                         + "&type=" + typeId
                         + "&des=" + URLEncoder.encode(desc), response ->
         {
@@ -440,6 +441,7 @@ public class SendError extends ActivityEnhanced {
 
     }
 
+    @SuppressLint("StaticFieldLeak")
     private void uploadToServer(String url) {
         new AsyncTask<String, Void, String>() {
             @Override
@@ -602,7 +604,7 @@ public class SendError extends ActivityEnhanced {
             myBitmap = Bitmap.createBitmap(myBitmap, 0, 0, myBitmap.getWidth(), myBitmap.getHeight(), matrix, true);
             imageview.setImageBitmap(myBitmap);
         } catch (Exception e) {
-
+            Log.i("Exception", "Exception:" + e);
         }
 
     }
@@ -731,6 +733,7 @@ public class SendError extends ActivityEnhanced {
     }
 
     //httputils for send parametr post method
+    @SuppressLint("StaticFieldLeak")
     public class MyTask extends AsyncTask<MyHttpUtils.RequestData, Void, String> {
 
 
@@ -738,6 +741,7 @@ public class SendError extends ActivityEnhanced {
         protected void onPreExecute() {
             if (tasks.isEmpty()) {
                 //  pb.setVisibility(View.VISIBLE);
+                Log.e("MYTAG", " tasks " + tasks);
             }
             tasks.add(this);
         }
@@ -758,6 +762,7 @@ public class SendError extends ActivityEnhanced {
             tasks.remove(this);
             if (tasks.isEmpty()) {
                 //   pb.setVisibility(View.INVISIBLE);
+                Log.e("MYTAG", " tasks " + tasks);
             }
         }
     }
@@ -772,9 +777,5 @@ public class SendError extends ActivityEnhanced {
     }
 
     //add font
-    @Override
-    protected void attachBaseContext(Context newBase) {
-        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
 
-    }
 }

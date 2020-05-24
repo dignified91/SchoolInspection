@@ -1,5 +1,6 @@
 package iso.my.com.inspectionstudentorganization;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Typeface;
@@ -43,13 +44,13 @@ public class SupportUniFormActivity extends AppCompatActivity {
         //=====================================================================
         TextView toolbar_title = findViewById(R.id.toolbar_title);
         toolbar_title.setText(R.string.toolbarsupport);
-        Typeface face = Typeface.createFromAsset(getAssets(), "fonts/Yekan.ttf");
-        toolbar_title.setTypeface(face);
+
 
         //====================================================================
 
     }
 
+    @SuppressLint("SetJavaScriptEnabled")
     public void initFields() {
         // TODO Auto-generated method stub
 
@@ -63,6 +64,7 @@ public class SupportUniFormActivity extends AppCompatActivity {
 
     }
 
+    @SuppressLint("AddJavascriptInterface")
     public void setListeners() {
         // TODO Auto-generated method stub
 
@@ -134,10 +136,6 @@ public class SupportUniFormActivity extends AppCompatActivity {
         }
     }
 
-    @Override
-    protected void attachBaseContext(Context newBase) {
-        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
 
-    }
 
 }

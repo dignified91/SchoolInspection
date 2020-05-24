@@ -121,7 +121,7 @@ public class ChooseApk extends AppCompatActivity {
             pref = getSharedPreferences("myprefs", MODE_PRIVATE);
             SharedPreferences.Editor editor = pref.edit();
             editor.clear();
-            editor.commit();
+            editor.apply();
 
             Intent intent=new Intent(getApplicationContext(),LoginUser.class);
             startActivity(intent);
@@ -156,10 +156,6 @@ public class ChooseApk extends AppCompatActivity {
         }
     }
     //set font
-    @Override
-    protected void attachBaseContext(Context newBase) {
-        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
 
-    }
 
 }

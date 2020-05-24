@@ -53,8 +53,7 @@ public class SendProForm extends AppCompatActivity {
         //=====================================================================
         TextView toolbar_title = findViewById(R.id.toolbar_title);
         toolbar_title.setText(R.string.toolbarsendform);
-        Typeface face = Typeface.createFromAsset(getAssets(), "fonts/Yekan.ttf");
-        toolbar_title.setTypeface(face);
+
         //====================================================================
 
         back = findViewById(R.id.back);
@@ -251,9 +250,6 @@ public class SendProForm extends AppCompatActivity {
                         alertbox();
 
 
-                    } else {
-
-
                     }
 
 
@@ -281,10 +277,6 @@ public class SendProForm extends AppCompatActivity {
         }
     }
 
-    @Override
-    protected void attachBaseContext(Context newBase) {
-        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
 
-    }
 
 }

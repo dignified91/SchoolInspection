@@ -71,6 +71,7 @@ import iso.my.com.dlibrary.components.DateItem;
 import iso.my.com.dlibrary.interfaces.DateSetListener;
 import iso.my.com.inspectionstudentorganization.GeneralClass.App;
 import iso.my.com.inspectionstudentorganization.GeneralClass.MyHttpUtils;
+import iso.my.com.inspectionstudentorganization.GeneralClass.Text_converter;
 import iso.my.com.inspectionstudentorganization.Models.Price;
 import iso.my.com.inspectionstudentorganization.Models.SaveFile;
 import iso.my.com.inspectionstudentorganization.utils.FileUtils;
@@ -80,12 +81,12 @@ public class SubmitBill extends AppCompatActivity {
     ImageButton back, camera, folder;
     Button upload, senderror;
     ImageView imageViewer;
-    TextView tv_billno,tv_billpay,tv_price;
+    TextView tv_billno, tv_billpay, tv_price,ttrue;
     List<AsyncTask> tasks = new ArrayList<>();
     private String currentPicturePath = "";
-    String number,pay,schprice;
+    String number, pay, schprice;
     int SELECT_FILE1 = 0;
-    public int  id,status;
+    public int id, status;
     SharedPreferences pref;
     String UPLOAD_URL = "http://sns.tehranedu.ir/ws/billimage.aspx";
     String URI_SENDBILL = "http://sns.tehranedu.ir/ws/billsubmit.aspx";//?ins_sch_id=1&inf_id=2"
@@ -106,13 +107,15 @@ public class SubmitBill extends AppCompatActivity {
         TextView toolbar_title = findViewById(R.id.toolbar_title);
         toolbar_title.setText(R.string.toolbarsubmitbill);
 
+        ttrue=findViewById(R.id.tvsubmit);
+        ttrue.setVisibility(View.GONE);
         back = findViewById(R.id.btnback);
         back.setOnClickListener(v -> onBackPressed());
 
-        tv_price=findViewById(R.id.price);
-        tv_billno=findViewById(R.id.numberbill);
-        tv_billpay=findViewById(R.id.payment);
-        fromDate=findViewById(R.id.date);
+        tv_price = findViewById(R.id.price);
+        tv_billno = findViewById(R.id.numberbill);
+        tv_billpay = findViewById(R.id.payment);
+        fromDate = findViewById(R.id.date);
         //mEndDate = new Date();
 
         senderror = findViewById(R.id.btnsubmit);
@@ -166,10 +169,12 @@ public class SubmitBill extends AppCompatActivity {
 
                     if (jsonObject.optString("status").equals("1")) {
                         // Toast.makeText(SendError.class, "ثبت اطلاعات با مشکل مواجه شد ، لطفا دوباره تلاش کنید.", Toast.LENGTH_LONG).show();
-
+ttrue.setVisibility(View.VISIBLE);
                         showselectpopup();
                     }
-
+else{
+                        ttrue.setText("مبلغ قرارداد تایید نشده و امکان ثبت فیش وجود ندارد.");
+                    }
 
                 } catch (JSONException e) {
                     e.printStackTrace();
@@ -187,7 +192,7 @@ public class SubmitBill extends AppCompatActivity {
 
     }
 
-       //add top of activity color
+    //add top of activity color
     private void changeStatusBarColor() {
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
@@ -219,22 +224,21 @@ public class SubmitBill extends AppCompatActivity {
                 for (int i = 0; i < jsonArray.length(); i++) {
                     JSONObject jsonObject = jsonArray.getJSONObject(i);
 
-                    status=jsonObject.getInt("status");
+                    status = jsonObject.getInt("status");
 
-                    if (status==0) {
+                    if (status == 0) {
 
-                      tv_price.setText("تایید نشده!");
-                       // notFound();
+                        tv_price.setText("تایید نشده!");
+                        // notFound();
 
-                    }
-
-                    else if (status==1) {
+                    } else if (status == 1) {
                         schprice = jsonObject.getString("payment");
 
-                       price = new Price(schprice);
+                        price = new Price(schprice);
 
+                    } else {
+                        tv_price.setText(0);
                     }
-                    else {  tv_price.setText(0);}
                 }
 
                 showdata();
@@ -256,10 +260,15 @@ public class SubmitBill extends AppCompatActivity {
         if (price != null) {
 
             tv_price.setText(price.getSchprice());
-
+         //   tv_price.setText("1000000");
+Text_converter(tv_price);
         }
     }
 
+    private void Text_converter(TextView textView) {
+        Text_converter n = new Text_converter(textView);
+        n.transfer();
+    }
     ///////////////////////////////////////////////////////////////////////////////////
     public void openCamera() {
         try {
@@ -317,7 +326,7 @@ public class SubmitBill extends AppCompatActivity {
                     HttpResponse response = httpclient.execute(httppost);
                     String st = EntityUtils.toString(response.getEntity(), "UTF-8");
                     Log.v("log_tag", "In the try Loop" + st);
-System.out.println("image:"+base64FromFile(new File(currentPicturePath)));
+                    System.out.println("image:" + base64FromFile(new File(currentPicturePath)));
                     return st;
 
                 } catch (Exception e) {
@@ -339,7 +348,7 @@ System.out.println("image:"+base64FromFile(new File(currentPicturePath)));
             Date date = new Date();
             date.setTime(Long.parseLong(System.currentTimeMillis() + randomInteger(4)));
             String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss_SSS", Locale.US).format(date);
-            System.out.println("timestamp:"+timeStamp);
+            System.out.println("timestamp:" + timeStamp);
             return new File(storageDir, "IMG_" + timeStamp + ".jpg");
         } catch (Exception e) {
             e.printStackTrace();
@@ -415,7 +424,9 @@ System.out.println("image:"+base64FromFile(new File(currentPicturePath)));
     }
 
     public static void setFullImageFromFilePath(ImageView imageview, String path) {
+
         Bitmap myBitmap = BitmapFactory.decodeFile(path);
+      //  Bitmap mb=BitmapFactory.decodeStream()
 
         try {
             ExifInterface exif = new ExifInterface(path);
@@ -591,8 +602,7 @@ System.out.println("image:"+base64FromFile(new File(currentPicturePath)));
         }
     }
 
-    double roundTwoDecimals(double d)
-    {
+    double roundTwoDecimals(double d) {
         DecimalFormat twoDForm = new DecimalFormat("#.##");
         return Double.valueOf(twoDForm.format(d));
     }

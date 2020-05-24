@@ -1,6 +1,7 @@
 package iso.my.com.inspectionstudentorganization;
 
 import android.Manifest;
+import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
 import android.app.AlertDialog;
 import android.content.Context;
@@ -155,8 +156,7 @@ public class ProductUniFormDetail extends AppCompatActivity implements OnMapRead
         //====================================================================
         TextView toolbar_title = findViewById(R.id.toolbar_title);
         toolbar_title.setText(R.string.toolbardetailproform);
-        Typeface face = Typeface.createFromAsset(getAssets(), "fonts/Yekan.ttf");
-        toolbar_title.setTypeface(face);
+
         //====================================================================
 
 
@@ -207,7 +207,7 @@ public class ProductUniFormDetail extends AppCompatActivity implements OnMapRead
     public void onLocationChanged(Location location) {
 
         try {
-
+            System.out.println("uri:" + "");
 //            LatLng myCoordinates = new LatLng(location.getLatitude(), location.getLongitude());
 //            mMap.moveCamera(CameraUpdateFactory.newLatLng(myCoordinates));
 //
@@ -235,6 +235,7 @@ public class ProductUniFormDetail extends AppCompatActivity implements OnMapRead
 
     }
 
+    @SuppressLint("MissingPermission")
     private void requestLocation() {
         Criteria criteria = new Criteria();
         criteria.setAccuracy(Criteria.ACCURACY_FINE);
@@ -251,6 +252,7 @@ public class ProductUniFormDetail extends AppCompatActivity implements OnMapRead
             // for ActivityCompat#requestPermissions for more details.
             return;
         }
+        assert provider != null;
         locationManager.requestLocationUpdates(provider, 20000, 20, this);
     }
 
@@ -392,12 +394,14 @@ public class ProductUniFormDetail extends AppCompatActivity implements OnMapRead
     }
 
     //httputils for send parametr post method
+    @SuppressLint("StaticFieldLeak")
     public class MyTask extends AsyncTask<MyHttpUtils.RequestData, Void, String> {
 
 
         @Override
         protected void onPreExecute() {
             if (tasks.isEmpty()) {
+                System.out.println("uri:" + "");
                 //  pb.setVisibility(View.VISIBLE);
             }
             tasks.add(this);
@@ -413,11 +417,12 @@ public class ProductUniFormDetail extends AppCompatActivity implements OnMapRead
         @Override
         protected void onPostExecute(String result) {
             if (result == null) {
-                result = "null";
+                System.out.println("uri:" + "");
             }
             //  tv.setText(result);
             tasks.remove(this);
             if (tasks.isEmpty()) {
+                System.out.println("uri:" + "");
                 //   pb.setVisibility(View.INVISIBLE);
             }
         }
@@ -440,7 +445,7 @@ public class ProductUniFormDetail extends AppCompatActivity implements OnMapRead
             return;
 
         } else {
-            Log.i("mm", "hey id is " + Integer.toString(id));
+            Log.i("mm", "hey id is " + id);
 
         }
 
@@ -530,10 +535,6 @@ public class ProductUniFormDetail extends AppCompatActivity implements OnMapRead
     }
 
     //add font
-    @Override
-    protected void attachBaseContext(Context newBase) {
-        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
 
-    }
 }
 

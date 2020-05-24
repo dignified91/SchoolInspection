@@ -316,10 +316,6 @@ public class MainMenuOffice extends AppCompatActivity implements SwipeRefreshLay
     }
 
     //set font
-    @Override
-    protected void attachBaseContext(Context newBase) {
-        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
 
-    }
 
 }

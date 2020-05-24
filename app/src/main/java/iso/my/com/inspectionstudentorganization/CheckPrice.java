@@ -1,19 +1,17 @@
 package iso.my.com.inspectionstudentorganization;
 
 import android.Manifest;
+import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
-import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
-import android.graphics.Typeface;
 import android.location.Criteria;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
-import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.provider.Settings;
@@ -58,8 +56,6 @@ import iso.my.com.inspectionstudentorganization.GeneralClass.Text_converter;
 import iso.my.com.inspectionstudentorganization.Models.SpType;
 import iso.my.com.inspectionstudentorganization.OfficeDet.EndIns;
 
-import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
-
 public class CheckPrice extends AppCompatActivity implements OnMapReadyCallback, LocationListener {
 
     ImageButton back;
@@ -103,8 +99,7 @@ public class CheckPrice extends AppCompatActivity implements OnMapReadyCallback,
         //=====================================================================
         TextView toolbar_title = findViewById(R.id.toolbar_title);
         toolbar_title.setText(R.string.toolbarcheckprice);
-        Typeface face = Typeface.createFromAsset(getAssets(), "fonts/Yekan.ttf");
-        toolbar_title.setTypeface(face);
+
         //====================================================================
 
         back = findViewById(R.id.btnback);
@@ -156,6 +151,7 @@ public class CheckPrice extends AppCompatActivity implements OnMapReadyCallback,
 
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
+        assert mapFragment != null;
         mapFragment.getMapAsync(this);
 
         ///map
@@ -174,7 +170,7 @@ public class CheckPrice extends AppCompatActivity implements OnMapReadyCallback,
 
 
         }
-        ArrayAdapter dayadapter = new ArrayAdapter(CheckPrice.this, android.R.layout.simple_spinner_dropdown_item, day);
+        ArrayAdapter<String> dayadapter = new ArrayAdapter<>(CheckPrice.this, android.R.layout.simple_spinner_dropdown_item, day);
         dayspinner.setAdapter(dayadapter);
 
         dayspinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -216,7 +212,7 @@ public class CheckPrice extends AppCompatActivity implements OnMapReadyCallback,
 
 
         }
-        ArrayAdapter caradapter = new ArrayAdapter(CheckPrice.this, android.R.layout.simple_spinner_dropdown_item, car);
+        ArrayAdapter<String> caradapter = new ArrayAdapter<>(CheckPrice.this, android.R.layout.simple_spinner_dropdown_item, car);
         carspinner.setAdapter(caradapter);
         carspinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
 
@@ -266,7 +262,7 @@ public class CheckPrice extends AppCompatActivity implements OnMapReadyCallback,
             reg.add("منطقه نوع 2");
 
         }
-        ArrayAdapter regadapter = new ArrayAdapter(CheckPrice.this, android.R.layout.simple_spinner_dropdown_item, reg);
+        ArrayAdapter<String> regadapter = new ArrayAdapter<>(CheckPrice.this, android.R.layout.simple_spinner_dropdown_item, reg);
         regionspinner.setAdapter(regadapter);
         regionspinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
 
@@ -298,7 +294,7 @@ public class CheckPrice extends AppCompatActivity implements OnMapReadyCallback,
 
 
         }
-        ArrayAdapter servadapter = new ArrayAdapter(CheckPrice.this, android.R.layout.simple_spinner_dropdown_item, serv);
+        ArrayAdapter<String> servadapter = new ArrayAdapter<>(CheckPrice.this, android.R.layout.simple_spinner_dropdown_item, serv);
         servicespinner.setAdapter(servadapter);
         servicespinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
 
@@ -329,7 +325,7 @@ public class CheckPrice extends AppCompatActivity implements OnMapReadyCallback,
             pe.add("3 نفر");
 
         }
-        ArrayAdapter peadapter = new ArrayAdapter(CheckPrice.this, android.R.layout.simple_spinner_dropdown_item, pe);
+        ArrayAdapter<String> peadapter = new ArrayAdapter<>(CheckPrice.this, android.R.layout.simple_spinner_dropdown_item, pe);
         peoplespinner.setAdapter(peadapter);
         peoplespinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
 
@@ -360,7 +356,7 @@ public class CheckPrice extends AppCompatActivity implements OnMapReadyCallback,
             pe.add("8 نفر");
 
         }
-        ArrayAdapter peadapter = new ArrayAdapter(CheckPrice.this, android.R.layout.simple_spinner_dropdown_item, pe);
+        ArrayAdapter<String> peadapter = new ArrayAdapter<>(CheckPrice.this, android.R.layout.simple_spinner_dropdown_item, pe);
         peoplespinner.setAdapter(peadapter);
         peoplespinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
 
@@ -404,7 +400,7 @@ public class CheckPrice extends AppCompatActivity implements OnMapReadyCallback,
     public void onLocationChanged(Location location) {
 
         try {
-
+            System.out.println("uri:" + "");
 //            LatLng myCoordinates = new LatLng(location.getLatitude(), location.getLongitude());
 //            mMap.moveCamera(CameraUpdateFactory.newLatLng(myCoordinates));
 //
@@ -432,6 +428,7 @@ public class CheckPrice extends AppCompatActivity implements OnMapReadyCallback,
 
     }
 
+    @SuppressLint("MissingPermission")
     private void requestLocation() {
         Criteria criteria = new Criteria();
         criteria.setAccuracy(Criteria.ACCURACY_FINE);
@@ -608,7 +605,7 @@ public class CheckPrice extends AppCompatActivity implements OnMapReadyCallback,
                 + "&schlat=" + sp22.trim()
                 + "&schlon=" + sp44.trim());
 
-        JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(
+        @SuppressLint("SetTextI18n") JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(
                 URI_CHECKPRICE
                         + "?sch_id=" + id
                         + "&dayid=" + day_id
@@ -639,11 +636,7 @@ public class CheckPrice extends AppCompatActivity implements OnMapReadyCallback,
 //
 //                        startActivity(intent);
 
-                    } else {
-
-
                     }
-
 
                 } catch (JSONException e) {
                     e.printStackTrace();
@@ -665,12 +658,9 @@ public class CheckPrice extends AppCompatActivity implements OnMapReadyCallback,
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setCancelable(false);
         builder.setMessage("تخلف مورد نظر ثبت شد.");
-        builder.setPositiveButton("باشه!", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                //  Intent intent = new Intent(getApplicationContext(), Menu.class);
-                //   startActivity(intent);
-            }
+        builder.setPositiveButton("باشه!", (dialog, which) -> {
+            //  Intent intent = new Intent(getApplicationContext(), Menu.class);
+            //   startActivity(intent);
         });
 
         AlertDialog alert = builder.create();
@@ -685,10 +675,6 @@ public class CheckPrice extends AppCompatActivity implements OnMapReadyCallback,
         }
     }
 
-    @Override
-    protected void attachBaseContext(Context newBase) {
-        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
 
-    }
 
 }

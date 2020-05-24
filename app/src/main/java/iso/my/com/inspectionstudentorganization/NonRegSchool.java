@@ -1,18 +1,16 @@
 package iso.my.com.inspectionstudentorganization;
 
 import android.Manifest;
+import android.annotation.SuppressLint;
 import android.app.ProgressDialog;
-import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
-import android.graphics.Typeface;
 import android.location.Criteria;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
-import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.provider.Settings;
@@ -52,7 +50,6 @@ import java.util.ArrayList;
 import iso.my.com.inspectionstudentorganization.GeneralClass.App;
 import iso.my.com.inspectionstudentorganization.GeneralClass.GPSTracker;
 import iso.my.com.inspectionstudentorganization.Models.SpType;
-import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 public class NonRegSchool extends AppCompatActivity implements OnMapReadyCallback, LocationListener {
 
@@ -94,8 +91,7 @@ public class NonRegSchool extends AppCompatActivity implements OnMapReadyCallbac
         //=====================================================================
         TextView toolbar_title = findViewById(R.id.toolbar_title);
         toolbar_title.setText(R.string.toolbarnonregsch);
-        Typeface face = Typeface.createFromAsset(getAssets(), "fonts/Yekan.ttf");
-        toolbar_title.setTypeface(face);
+
 
         //====================================================================
         schname = findViewById(R.id.schoolname);
@@ -142,6 +138,7 @@ public class NonRegSchool extends AppCompatActivity implements OnMapReadyCallbac
         locationManager = (LocationManager) getSystemService(LOCATION_SERVICE);
         mo = new MarkerOptions().position(new LatLng(35.70617388, 51.37748167)).title("My Current Location");
 
+        assert mapFragment != null;
         mapFragment.getMapAsync(this);
 
 
@@ -178,7 +175,7 @@ public class NonRegSchool extends AppCompatActivity implements OnMapReadyCallbac
 
 
         }
-        ArrayAdapter dayadapter = new ArrayAdapter(NonRegSchool.this, android.R.layout.simple_spinner_dropdown_item, reg);
+        ArrayAdapter<String> dayadapter = new ArrayAdapter<>(NonRegSchool.this, android.R.layout.simple_spinner_dropdown_item, reg);
         regionspinner.setAdapter(dayadapter);
 
         regionspinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -225,7 +222,7 @@ public class NonRegSchool extends AppCompatActivity implements OnMapReadyCallbac
 
 
         }
-        ArrayAdapter dayadapter = new ArrayAdapter(NonRegSchool.this, android.R.layout.simple_spinner_dropdown_item, level);
+        ArrayAdapter<String> dayadapter = new ArrayAdapter<>(NonRegSchool.this, android.R.layout.simple_spinner_dropdown_item, level);
         levelspinner.setAdapter(dayadapter);
 
         levelspinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -260,7 +257,7 @@ public class NonRegSchool extends AppCompatActivity implements OnMapReadyCallbac
 
 
         }
-        ArrayAdapter dayadapter = new ArrayAdapter(NonRegSchool.this, android.R.layout.simple_spinner_dropdown_item, sx);
+        ArrayAdapter<String> dayadapter = new ArrayAdapter<>(NonRegSchool.this, android.R.layout.simple_spinner_dropdown_item, sx);
         sexspinner.setAdapter(dayadapter);
 
         sexspinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -342,6 +339,7 @@ public class NonRegSchool extends AppCompatActivity implements OnMapReadyCallbac
 
     }
 
+    @SuppressLint("MissingPermission")
     private void requestLocation() {
 
         Criteria criteria = new Criteria();
@@ -504,9 +502,5 @@ exp=ed_exp.getText().toString();
     }
 
     //font
-    @Override
-    protected void attachBaseContext(Context newBase) {
-        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
 
-    }
 }

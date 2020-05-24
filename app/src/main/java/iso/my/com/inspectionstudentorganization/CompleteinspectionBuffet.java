@@ -45,8 +45,7 @@ public class CompleteinspectionBuffet extends AppCompatActivity {
         //=====================================================================
         TextView toolbar_title = findViewById(R.id.toolbar_title);
         toolbar_title.setText(R.string.toolbarcompleteins);
-        Typeface face = Typeface.createFromAsset(getAssets(), "fonts/Yekan.ttf");
-        toolbar_title.setTypeface(face);
+
 
         //====================================================================
     }
@@ -142,7 +141,7 @@ public class CompleteinspectionBuffet extends AppCompatActivity {
         IntentResult result = IntentIntegrator.parseActivityResult(requestCode, resultCode, data);
         if (result != null) {
             if (result.getContents() == null) {
-
+                System.out.println("uri:" + "");
                 //  Toast.makeText(this, "Cancelled", Toast.LENGTH_LONG).show();
 
             } else {
@@ -184,9 +183,5 @@ public class CompleteinspectionBuffet extends AppCompatActivity {
         }
     }
 
-    @Override
-    protected void attachBaseContext(Context newBase) {
-        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
 
-    }
 }

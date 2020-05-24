@@ -75,8 +75,7 @@ public class SubmitBuffetData extends AppCompatActivity implements DateSetListen
         //=====================================================================
         TextView toolbar_title = findViewById(R.id.toolbar_title);
         toolbar_title.setText(R.string.toolbarbuffetinfo);
-        Typeface face = Typeface.createFromAsset(getAssets(), "fonts/Yekan.ttf");
-        toolbar_title.setTypeface(face);
+
         //====================================================================
 
         back = findViewById(R.id.btnback);
@@ -386,11 +385,7 @@ public class SubmitBuffetData extends AppCompatActivity implements DateSetListen
         }
     }
 
-    @Override
-    protected void attachBaseContext(Context newBase) {
-        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
 
-    }
 
 
 }
