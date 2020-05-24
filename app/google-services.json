@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1098674266541",
+    "firebase_url": "https://schoolinspection-b714a.firebaseio.com",
+    "project_id": "schoolinspection-b714a",
+    "storage_bucket": "schoolinspection-b714a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1098674266541:android:f5d440803c786a60710124",
+        "android_client_info": {
+          "package_name": "iso.my.com.inspectionstudentorganization"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1098674266541-cq9bpi2rhk7emc3h6oll5udd1639gcsu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDg0GxcFC9wBXYoogO8nfNWRoJ0BgA_920"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1098674266541-cq9bpi2rhk7emc3h6oll5udd1639gcsu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
